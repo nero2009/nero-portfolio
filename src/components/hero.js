@@ -1,37 +1,48 @@
-import React from 'react';
+import React from 'react'
 import HeroImage from '../../assets/coding1.svg'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import BgHero from '../../assets/hero-header.svg'
+import Typist from 'react-typist'
 
-const Hero = ({data}) => {
-    return (
-        <section className="hero" style={{textAlign: "center"}}>
-            <div className="hero__image-mobile">
-            	<HeroImage className="hero__image"/>
-            </div>
-            <div className="hero__image-desktop">
-                <Img sizes={data.heroImage.sizes}/>
-            </div>
-            <h1 className="hero__text">Hi, I'm Nero, I'm a Frontend Developer</h1>
-        </section>
-    );
-};
+const Hero = ({ data }) => {
+  return (
+    <section className="hero" style={{ textAlign: 'center' }}>
+      <div className="hero__image-mobile">
+        <HeroImage className="hero__image" />
+      </div>
+      <div className="hero__image-desktop">
+        <BgHero className="hero__image-desktop__image" />
+      </div>
+      <div className="hero__image-text">
+        <h1 className="hero__text">
+          Hi, I'm Nero, I'm a
+          <Typist>
+            <span>Dog Lover</span>
+            <Typist.Backspace count={9} delay={300} />
+            <span>Man Utd fan</span>
+            <Typist.Backspace count={11} delay={300} />
+            <span>Frontend Developer</span>
+          </Typist>
+        </h1>
+      </div>
+    </section>
+  )
+}
 
 export default props => (
-    <StaticQuery
-        query={graphql`
-            query HeroImageQuery{
-                heroImage: imageSharp(fluid:{
-                    originalName:{
-                        regex: "/hero-header.png/"
-                    }
-                }){
-                    sizes(maxWidth:400){
-                        ...GatsbyImageSharpSizes
-                    }
-                }
-            }
-        `}
-        render={data => <Hero data={data} {...props}/> }
-    />
+  <StaticQuery
+    query={graphql`
+      query HeroImageQuery {
+        heroImage: imageSharp(
+          fluid: { originalName: { regex: "/hero-header.png/" } }
+        ) {
+          sizes(maxWidth: 800) {
+            ...GatsbyImageSharpSizes
+          }
+        }
+      }
+    `}
+    render={data => <Hero data={data} {...props} />}
+  />
 )

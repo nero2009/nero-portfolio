@@ -4,11 +4,19 @@ module.exports = {
     description: `Open source`,
     author: `@finallynero`,
     social: [
-      { title: 'Github', link: 'https://github.com/nero2009',  icon: 'github' },
-      { title: 'Twitter', link: 'https://twitter.com/finallynero',  icon: 'twitter' },
-      { title: 'Linkedin', link: 'https://linkedin.com/in/dantehemerson',  icon: 'linkedin' },
+      { title: 'Github', link: 'https://github.com/nero2009', icon: 'github' },
+      {
+        title: 'Twitter',
+        link: 'https://twitter.com/finallynero',
+        icon: 'twitter',
+      },
+      {
+        title: 'Linkedin',
+        link: 'https://linkedin.com/in/dantehemerson',
+        icon: 'linkedin',
+      },
       // { title: 'Dev', link: 'https://dev.to/dantehemerson',  icon: 'dev' },
-   ],
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -21,13 +29,21 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `articles`,
+        path: `${__dirname}/src/articles`,
+      },
+    },
+    `gatsby-transformer-remark`,
+    {
       resolve: 'gatsby-plugin-react-svg',
       options: {
-          rule: {
-            include: /assets/
-          }
-      }
-  },
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // this (optional) plugin enables Progressive Web App + Offline functionality

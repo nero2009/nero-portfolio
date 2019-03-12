@@ -19,9 +19,9 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Header/>
-          {children}
-        <Footer/>
+        <Header />
+        {children}
+        <Footer />
       </>
     )}
   />
