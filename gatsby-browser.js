@@ -5,3 +5,5 @@
  */
 
 // You can delete this file if you're not using it
+// gatsby-browser.js
+require('prismjs/themes/prism-solarizedlight.css')

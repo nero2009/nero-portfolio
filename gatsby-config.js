@@ -35,7 +35,17 @@ module.exports = {
         path: `${__dirname}/src/articles`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {},
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
