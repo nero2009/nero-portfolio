@@ -25,7 +25,7 @@ export default class Header extends React.Component {
 
   render() {
     const { active } = this.state
-    const logo = '< /NERO >'
+    const logo = '<NERO/>'
     return (
       <div className="container">
         <div className="header__border" style={{ marginTop: -10 }}>
@@ -36,7 +36,7 @@ export default class Header extends React.Component {
             <div className="logo">
               <p style={{ marginTop: '0px' }}>{logo}</p>
             </div>
-            <nav className="stroke">
+            <nav className="stroke st-menu st-effect-1">
               <a
                 href="#"
                 className="hide-desktop"
@@ -46,25 +46,28 @@ export default class Header extends React.Component {
               </a>
               <ul className={(active ? 'hide-mobile' : '') + ' show-desktop'}>
                 <li id="exit" className="exit-btn hide-desktop">
-                  <Close onClick={this.toggleClass} />
+                  <Close
+                    onClick={this.toggleClass}
+                    style={{ color: 'white' }}
+                  />
                 </li>
                 <li>
-                  <Link activeClassName="" to="/">
+                  <Link activeClassName="active-nav" to="/">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link activeClassName="" to="/about/">
+                  <Link activeClassName="active-nav" to="/about/">
                     About
                   </Link>{' '}
                 </li>
                 <li>
-                  <Link activeClassName="" to="/work/">
+                  <Link activeClassName="active-nav" to="/work/">
                     Work
                   </Link>
                 </li>
                 <li>
-                  <Link activeClassName="" to="/blogs/">
+                  <Link activeClassName="active-nav" to="/blogs/">
                     Blog
                   </Link>
                 </li>

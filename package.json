@@ -1,10 +1,11 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "nero-portfolio",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Personal website for finallynero and also where he writes about tech.",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "finallynero <neroadaware@gmail.com>",
   "dependencies": {
+    "@weknow/gatsby-remark-twitter": "^0.2.0",
     "gatsby": "^2.0.76",
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-manifest": "^2.0.9",

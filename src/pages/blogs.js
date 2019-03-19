@@ -18,7 +18,11 @@ const blogs = ({ data }) => {
           }}
         >
           I cross post some blog post on{' '}
-          <a href="http://" target="__blank">
+          <a
+            href="https://dev.to/finallynero"
+            target="__blank"
+            rel="noopener noreferrer"
+          >
             Dev Community
           </a>
         </p>

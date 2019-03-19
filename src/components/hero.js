@@ -18,11 +18,11 @@ const Hero = ({ data }) => {
         <h1 className="hero__text">
           Hi, I'm Nero, I'm a
           <Typist>
-            <span>Dog Lover</span>
+            <span style={{ color: '#FE5F55' }}>Dog Lover</span>
             <Typist.Backspace count={9} delay={300} />
-            <span>Man Utd fan</span>
+            <span style={{ color: '#4F6367' }}>Man Utd fan</span>
             <Typist.Backspace count={11} delay={300} />
-            <span>Frontend Developer</span>
+            <span style={{ color: '#4F86C6' }}>Frontend Developer</span>
           </Typist>
         </h1>
       </div>
