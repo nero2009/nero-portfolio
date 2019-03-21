@@ -68,7 +68,7 @@ One problem I struggled with when I was given this question during the interview
 
 * Finally failing a whiteboard test doesn't mean you are a failure or you are a trash programmer.
 
-{% twitter 1044905355933876225 %}
+https://twitter.com/iamdevloper/status/1044905355933876225
 
 If you read this up to this point, I am glad the title didn't put you off and hopefully you learnt something. Also,. if you have a different or more elegant solution simply share by kindly writing it in the comment section.
 

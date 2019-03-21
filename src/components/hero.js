@@ -1,7 +1,6 @@
 import React from 'react'
 import HeroImage from '../../assets/coding1.svg'
 import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 import BgHero from '../../assets/hero-header.svg'
 import Typist from 'react-typist'
 

@@ -43,6 +43,14 @@ module.exports = {
             resolve: `gatsby-remark-prismjs`,
             options: {},
           },
+          {
+            resolve: '@weknow/gatsby-remark-codepen',
+            options: {
+              theme: 'dark',
+              height: 400,
+            },
+          },
+          `@weknow/gatsby-remark-twitter`,
         ],
       },
     },

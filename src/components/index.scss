@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat:400,700');
 * {
   box-sizing: border-box;
 }
@@ -40,7 +40,10 @@ html {
 .header__border {
   height: 6px;
   width: 100%;
-  //   margin-top: -9px;
+  margin-top: -10px;
+  &__image {
+    width: 100%;
+  }
 }
 .navbar {
   width: 100%;
@@ -55,6 +58,23 @@ html {
 
 .container {
   text-align: center;
+}
+.logo {
+  width: 150px;
+  &__image {
+    width: 60%;
+  }
+}
+
+.about-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  @media only screen and (max-width: 900px) {
+    flex-direction: column;
+  }
 }
 
 .hero {
@@ -118,16 +138,83 @@ nav ul li a {
   width: 30px;
   cursor: pointer;
 }
+.inline-link {
+  color: #00aced;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.divider {
+}
 
 header {
 }
+// figure {
+//   width: 90vw;
+//   max-width: 800px;
+//   margin: 0 auto 1.5rem;
+//   display: grid;
+//   grid-template-columns: repeat(10, 1fr);
+//   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr max-content;
+
+//   &:before {
+//     content: '';
+//     display: block;
+//     background: transparent url('https://via.placeholder.com/500') no-repeat;
+//     background-size: 100% 100%;
+//     grid-column: 1/10;
+//     grid-row: 2/11;
+//   }
+//   img {
+//     width: 100%;
+//     grid-column: 2/11;
+//     grid-row: 1/10;
+//     z-index: 1;
+//     @media (min-width: 900) {
+//       justify-self: right;
+//       width: auto;
+//     }
+//   }
+// }
 
 .layout-container {
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1000px;
   padding: 0px 20px 1.45rem;
   padding-top: 0;
   min-height: calc(100vh - 100px);
+}
+.about-page {
+  margin-top: 50px;
+  &__text {
+    font-size: 2em;
+    margin: 0;
+  }
+}
+.about {
+  width: 500px;
+  padding: 10px;
+  &__image {
+    width: 420px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 2em;
+  }
+  &__text {
+    line-height: 1.7;
+    font-size: 1.1em;
+  }
+  &__text-bold {
+    font-weight: 600;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    &__image {
+      width: 100%;
+    }
+  }
 }
 .post-container {
   margin-top: 50px;
@@ -152,6 +239,7 @@ header {
     margin: 5px 0px 15px;
     font-size: 0.8em;
     font-weight: 400;
+    color: #8e8e8e;
   }
 
   &__readMore {
@@ -180,7 +268,7 @@ header {
   }
   &__date {
     font-size: 0.8em;
-    color: #9fa7a7;
+    color: #8e8e8e;
     font-weight: 400;
   }
 }
@@ -198,6 +286,11 @@ header {
   }
 }
 
+.menu-container {
+  height: 40px;
+  width: 40px;
+}
+
 .footer {
   width: 100%;
   height: 100px;
@@ -210,7 +303,7 @@ header {
   margin-top: -4px;
 
   &__icons {
-    width: 200px;
+    width: 120px;
     margin: auto;
   }
   &__text {
@@ -278,9 +371,9 @@ header {
   .navbar {
     padding: 2em 2.6em;
   }
-  .active-nav {
-    border-bottom: 4px solid #333;
-  }
+  // .active-nav {
+  //   border-bottom: 4px solid #333;
+  // }
   .show-desktop {
     display: block;
     margin: 0 auto 13% auto;
@@ -299,11 +392,10 @@ header {
     li {
       float: left;
       a {
-        color: #4f86c6;
+        color: #333333;
         background-color: inherit;
         text-align: right;
-        font-weight: 800;
-        text-transform: uppercase;
+        font-weight: 500;
         transition: all 0.5s;
         // &:hover {
         //   background-color: #555;
@@ -343,11 +435,14 @@ header {
     width: 0%;
     content: '.';
     color: transparent;
-    background: #aaa;
-    height: 1px;
+    background: #4f86c6;
+    height: 4px;
+  }
+  .active-nav {
+    background: #a9cde0;
   }
   nav.stroke ul li a:hover:after {
-    width: 100%;
+    width: 50%;
   }
 
   .hero__image-mobile {

@@ -7,7 +7,6 @@ description: In this era of information boom the assumption is that you can pick
 ---
 
 In this era of information boom the assumption is that you can pick up any skill(technical or creative) because there are a lot of materials available but It is quite the opposite.
-{% twitter 1083339757336363008%}
 
 A lot of options/alternatives might lead to [decision fatigue](https://www.intelligenteconomist.com/decision-fatigue/). This is where a lot of beginners waste time and some end up giving up on learning that skill. Maybe some of them successful overcome decision fatigue and pick a learning material, half way through it they discover that this is not giving them the knowledge they seek, here again is another point where they might give up.
 

@@ -3,7 +3,7 @@ path: /understanding-css-pseudo-elements
 date: 2018-11-14
 title: Understanding CSS before and after pseudo-elements
 author: Nero Adaware
-description:
+description: When I started learning front-end development I really hated CSS and design(I still hate design) but my CSS is a little better. One concept I didn’t understand was CSS pseudo-elements ....
 ---
 
 When I started learning front-end development I really hated CSS and design(I still hate design) but my CSS is a little better. One concept I didn’t understand was CSS pseudo-elements `::after` and `::before`.
@@ -33,7 +33,7 @@ Pseudo elements have a content property which can be used to insert generated co
 
 Below are some simple demos of the `::before` pseudo-element.
 
-{% codepen https://codepen.io/finallynero/pen/oQLjVe %}
+https://codepen.io/finallynero/pen/oQLjVe
 
 In the first example in the demo We used the `::before` to add a string before the `p tag` and also styled it like a normal Html element.
 In the second `::before` is used to add bullet arrow to the list, the bullet arrow is a Font awesome icon.
@@ -42,7 +42,7 @@ In the second `::before` is used to add bullet arrow to the list, the bullet arr
 
 The `after` pseudo element is quite similar to the `before`, the only difference is its positioning which is after the last child of the selected element/ after the content of the selected element.
 
-{% codepen https://codepen.io/finallynero/pen/KrNqZR %}
+https://codepen.io/finallynero/pen/KrNqZR
 
 The first example uses `::after` on the `label` selector to indicate that an input field is required with an asterisk. While the second example shows how we can add an external link icon to the link.
 
@@ -58,9 +58,9 @@ It is also possible to combine pseudo-elements. Note: According to the CSS3 spec
  }
 ```
 
-A Simple demonstrating this is below
+A Simple demo demonstrating this is below
 
-{% codepen https://codepen.io/finallynero/pen/NEbgJM %}
+https://codepen.io/finallynero/pen/NEbgJM %}
 
 We used the pseudo-elements to add quotes to a sentence.
 
