@@ -20,7 +20,7 @@ This can be done using the label element `<label>`. Form label are important bec
 
 So it is important to provide labels for all form controls in your form, this includes text inputs, checkboxes, radio buttons e.t.c. Simply putting a label above/below a form control is not enough, Sematic HTML provides a way for us to associate a label with a particular form control, to do this the `Id` of form control must match the `for` attribute of the label.
 
-{% codepen https://codepen.io/finallynero/pen/KbRJry  %}
+https://codepen.io/finallynero/pen/KbRJry
 
 The above demo shows how to label form controls. You might not have noticed but the label acts as a clickable area which focuses the form control.
 
@@ -43,7 +43,7 @@ Visually it looks like there is nothing wrong with that form but if you use a sc
 
 You can easily group related form fields using the `fieldset` element and the `legend` element as a title for that group.
 
-{% codepen https://codepen.io/finallynero/pen/RvyRQE  %}
+https://codepen.io/finallynero/pen/RvyRQE
 
 This is just an introduction to making forms accessible, you can get more information from the below links
 

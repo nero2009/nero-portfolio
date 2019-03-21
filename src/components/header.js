@@ -1,10 +1,11 @@
-import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import PropTypes from 'prop-types'
 import React from 'react'
+import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import { Helmet } from 'react-helmet'
 import Menu from '../../assets/icon-menu.svg'
 import Close from '../../assets/icon-close.svg'
 import HeaderBorder from '../../assets/header-border.svg'
+import Logo from '../images/logo.svg'
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -25,31 +26,40 @@ export default class Header extends React.Component {
 
   render() {
     const { active } = this.state
-    const logo = '<NERO/>'
     return (
       <div className="container">
-        <div className="header__border" style={{ marginTop: -10 }}>
-          <HeaderBorder style={{ width: '100%' }} />
+        <Helmet>
+          <meta
+            charSet="utf-8"
+            name="personal site"
+            content="personal site"
+            description="Portfolio/blog site of finallynero"
+          />
+          <title>Nero</title>
+          <link rel="canonical" href="nero.netlify.com" />
+          <html lang="en" />
+        </Helmet>
+        <div className="header__border">
+          <HeaderBorder className="header__border__image" />
         </div>
         <header>
           <div className="navbar">
-            <div className="logo">
-              <p style={{ marginTop: '0px' }}>{logo}</p>
-            </div>
-            <nav className="stroke st-menu st-effect-1">
+            <Link to="/">
+              <div className="logo">
+                <img src={Logo} alt="logo" className="logo__image" />
+              </div>
+            </Link>
+            <nav className="stroke">
               <a
                 href="#"
-                className="hide-desktop"
-                style={{ height: '40px', width: '40px' }}
+                className="hide-desktop menu-container"
+                aria-label="menu icon"
               >
                 <Menu className="menu" id="menu" onClick={this.toggleClass} />
               </a>
               <ul className={(active ? 'hide-mobile' : '') + ' show-desktop'}>
                 <li id="exit" className="exit-btn hide-desktop">
-                  <Close
-                    onClick={this.toggleClass}
-                    style={{ color: 'white' }}
-                  />
+                  <Close onClick={this.toggleClass} className="close-icon" />
                 </li>
                 <li>
                   <Link activeClassName="active-nav" to="/">

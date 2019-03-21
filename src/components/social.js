@@ -25,11 +25,12 @@ const social = () => (
             key={item.title}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={item.title}
             className={`${item.icon}--hover social__icon`}
           >
             <img
               src={
-                item.icon == 'dev'
+                item.icon === 'dev'
                   ? 'https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg'
                   : `https://icongr.am/fontawesome/${
                       item.icon
