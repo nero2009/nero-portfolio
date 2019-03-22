@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat:400,700');
 * {
   box-sizing: border-box;
 }
@@ -53,7 +53,6 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 0.8em 1.2em;
-  // text-align: center;
 }
 
 .container {
@@ -123,12 +122,7 @@ nav ul li a {
   display: block;
   width: 100%;
   padding: 1em 2em;
-  // background-color: rgb(49, 55, 59);
   transition: background-color 0.5s;
-
-  &:hover {
-    // background-color: rgb(49, 73, 78);
-  }
 }
 .exit-btn {
   margin-bottom: 1em;
@@ -150,34 +144,6 @@ nav ul li a {
 
 header {
 }
-// figure {
-//   width: 90vw;
-//   max-width: 800px;
-//   margin: 0 auto 1.5rem;
-//   display: grid;
-//   grid-template-columns: repeat(10, 1fr);
-//   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr max-content;
-
-//   &:before {
-//     content: '';
-//     display: block;
-//     background: transparent url('https://via.placeholder.com/500') no-repeat;
-//     background-size: 100% 100%;
-//     grid-column: 1/10;
-//     grid-row: 2/11;
-//   }
-//   img {
-//     width: 100%;
-//     grid-column: 2/11;
-//     grid-row: 1/10;
-//     z-index: 1;
-//     @media (min-width: 900) {
-//       justify-self: right;
-//       width: auto;
-//     }
-//   }
-// }
-
 .layout-container {
   margin: 0 auto;
   max-width: 1000px;
@@ -295,8 +261,6 @@ header {
   width: 100%;
   height: 100px;
   background-color: #eef5db;
-  // position: fixed;
-  // bottom: 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -310,6 +274,8 @@ header {
     text-align: center;
     p {
       margin-top: 0px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 0.8em;
     }
   }
 }
@@ -346,6 +312,13 @@ header {
   nav ul {
     width: 40%;
   }
+  .footer {
+    &__text {
+      p {
+        font-size: 1.1em;
+      }
+    }
+  }
 }
 @media only screen and (max-width: 1024px) {
   .hero__image-desktop {
@@ -357,6 +330,9 @@ header {
     &:hover {
       background-color: rgb(49, 73, 78);
     }
+  }
+  .logo__image {
+    margin-left: -50px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -371,9 +347,6 @@ header {
   .navbar {
     padding: 2em 2.6em;
   }
-  // .active-nav {
-  //   border-bottom: 4px solid #333;
-  // }
   .show-desktop {
     display: block;
     margin: 0 auto 13% auto;
@@ -397,9 +370,6 @@ header {
         text-align: right;
         font-weight: 500;
         transition: all 0.5s;
-        // &:hover {
-        //   background-color: #555;
-        // }
         &:after {
           transition: all 0.5s;
         }
@@ -409,20 +379,6 @@ header {
       }
     }
   }
-
-  // nav ul li{
-  //     float: left;
-  // }
-  // nav ul li a{
-  //     color: #aaa;
-  //     background-color: inherit;
-  //     text-align: right;
-  //     font-weight: 800;
-  //     text-transform: uppercase;
-  //     &:hover{
-  //         background-color: inherit;
-  //     }
-  // }
   nav.stroke ul li a {
     position: relative;
   }

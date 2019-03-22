@@ -45,9 +45,7 @@ export default class Header extends React.Component {
         <header>
           <div className="navbar">
             <Link to="/">
-              <div className="logo">
-                <img src={Logo} alt="logo" className="logo__image" />
-              </div>
+              <img src={Logo} alt="logo" className="logo__image" />
             </Link>
             <nav className="stroke">
               <a
