@@ -12,10 +12,9 @@ module.exports = {
       },
       {
         title: 'Linkedin',
-        link: 'https://linkedin.com/in/dantehemerson',
+        link: 'https://www.linkedin.com/in/adaware-oghenero-529200ba/',
         icon: 'linkedin',
       },
-      // { title: 'Dev', link: 'https://dev.to/dantehemerson',  icon: 'dev' },
     ],
   },
   plugins: [

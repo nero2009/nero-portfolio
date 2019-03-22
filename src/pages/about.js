@@ -22,7 +22,6 @@ const about = ({ data }) => {
             </figure>
           </div>
           <div className="about ">
-            <div className="divider" />
             <p className="about__title">Hi, I am Nero.</p>
             <p className="about__text">
               I am a{' '}

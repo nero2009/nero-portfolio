@@ -140,6 +140,9 @@ nav ul li a {
   }
 }
 .divider {
+  border: 1px solid #d8d8d8;
+  height: 1px;
+  width: 100%;
 }
 
 header {
@@ -182,6 +185,21 @@ header {
     }
   }
 }
+.portfolio-container {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: minmax(min-content, 590px);
+  grid-gap: 30px;
+  justify-content: center;
+  @media only screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.portfolio {
+  &__work {
+    border: 1px solid gray;
+  }
+}
 .post-container {
   margin-top: 50px;
   display: flex;
@@ -211,7 +229,11 @@ header {
   &__readMore {
     font-size: 0.8em;
     display: inline-block;
-    text-decoration: underline;
+    color: #00aced;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 .article {

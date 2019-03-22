@@ -17,6 +17,7 @@ export default function Template({ data }) {
           Back to articles
         </Link>
         <h1 className="article__title">{blog.frontmatter.title}</h1>
+        <div className="divider" />
         <h4 className="article__date">Written by {blog.frontmatter.author}</h4>
         <div
           className="article"
