@@ -51,6 +51,12 @@ module.exports = {
             },
           },
           `@weknow/gatsby-remark-twitter`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
         ],
       },
     },

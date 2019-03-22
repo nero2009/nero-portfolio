@@ -1,8 +1,8 @@
 import React from 'react'
-import HeroImage from '../../assets/coding1.svg'
 import { StaticQuery, graphql } from 'gatsby'
-import BgHero from '../../assets/hero-header.svg'
 import Typist from 'react-typist'
+import HeroImage from '../../assets/coding1.svg'
+import BgHero from '../../assets/hero-header.svg'
 
 const Hero = ({ data }) => {
   return (

@@ -13,7 +13,7 @@ const blogs = ({ data }) => {
             background: '#B8D8D8',
             padding: '15px',
             fontSize: '.8em',
-            color: 'white',
+            color: '#666',
             marginTop: '30px',
           }}
         >
@@ -22,6 +22,7 @@ const blogs = ({ data }) => {
             href="https://dev.to/finallynero"
             target="__blank"
             rel="noopener noreferrer"
+            style={{ color: 'gray', textDecoration: 'none' }}
           >
             Dev Community
           </a>
