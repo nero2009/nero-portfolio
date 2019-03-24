@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Finallynero Portfolio`,
-    description: `Open source`,
+    description: `Hi, I am Nero, a frontend developer, open-source contributor, technical writer, dog lover and feminist.`,
     author: `@finallynero`,
     social: [
       { title: 'Github', link: 'https://github.com/nero2009', icon: 'github' },

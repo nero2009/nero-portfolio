@@ -3,10 +3,12 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import HeaderBorder from '../../assets/header-border.svg'
+import SEO from '../components/seo'
 
 const about = ({ data }) => {
   return (
     <Layout>
+      <SEO />
       <div className="layout-container">
         <div className="about-page">
           <p className="about-page__text">

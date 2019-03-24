@@ -1,12 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-
+import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Blog from '../components/blog'
 
 const blogs = ({ data }) => {
   return (
     <Layout>
+      <SEO />
       <div className="layout-container">
         <p
           style={{

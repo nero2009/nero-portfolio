@@ -70,7 +70,7 @@ export default class Header extends React.Component {
                   </Link>{' '}
                 </li>
                 <li>
-                  <Link activeClassName="active-nav" to="">
+                  <Link activeClassName="active-nav" to="/work/">
                     Work
                   </Link>
                 </li>
