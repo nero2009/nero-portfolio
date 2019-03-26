@@ -8,7 +8,10 @@ export default function Template({ data }) {
   const blog = data.markdownRemark
   return (
     <Layout>
-      <SEO title={blog.frontmatter.title} />
+      <SEO
+        title={blog.frontmatter.title}
+        description={blog.frontmatter.description}
+      />
       <div className="layout-container">
         <Link to="/blogs" className="article-back-button">
           <img
@@ -39,6 +42,7 @@ export const articleQuery = graphql`
         title
         author
         date
+        description
       }
     }
   }
