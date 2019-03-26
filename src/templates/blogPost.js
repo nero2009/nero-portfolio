@@ -2,11 +2,13 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import Back from '../images/back-arrow.svg'
+import SEO from '../components/seo'
 
 export default function Template({ data }) {
   const blog = data.markdownRemark
   return (
     <Layout>
+      <SEO title={blog.frontmatter.title} />
       <div className="layout-container">
         <Link to="/blogs" className="article-back-button">
           <img

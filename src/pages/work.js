@@ -8,10 +8,10 @@ import PortfolioItem from '../components/portfolioItem'
 const work = ({ data }) => {
   return (
     <Layout>
-      <SEO />
+      <SEO title="Work" />
       <div className="layout-container">
         <div className="about-page">
-          <p className="about-page__text">Portfolio</p>
+          <p className="about-page__text">portfolio</p>
           <HeaderBorder style={{ width: 100 }} />
           <div className="portfolio-container">
             <PortfolioItem

@@ -16,7 +16,11 @@ const Hero = ({ data }) => {
       <div className="hero__image-text">
         <h1 className="hero__text">
           Hi, I'm Nero, I'm a
-          <Typist>
+          <Typist
+            cursor={{
+              show: false,
+            }}
+          >
             <span style={{ color: '#FE5F55' }}>Dog Lover</span>
             <Typist.Backspace count={9} delay={300} />
             <span style={{ color: '#4F6367' }}>Man Utd fan</span>

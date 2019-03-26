@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 const about = ({ data }) => {
   return (
     <Layout>
-      <SEO />
+      <SEO title="About" />
       <div className="layout-container">
         <div className="about-page">
           <p className="about-page__text">

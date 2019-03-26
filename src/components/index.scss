@@ -185,6 +185,13 @@ header {
     }
   }
 }
+.blog-page {
+  margin-top: 50px;
+  &__text {
+    font-size: 2em;
+    margin: 0;
+  }
+}
 .portfolio-container {
   display: grid;
   max-width: 100%;
