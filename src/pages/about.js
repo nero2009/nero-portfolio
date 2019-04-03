@@ -29,7 +29,7 @@ const about = ({ data }) => {
               I am a{' '}
               <span className="about__text-bold">Frontend developer</span> who
               specializes in React, Gatsby, Vue js. I quite familiar with the
-              toolings around the react ecosystem. I also play with Figma
+              toolings around the React ecosystem. I also play with Figma
               sometimes hoping that I can up my UI design skillset. I am an
               active open source contributor at{' '}
               <a
@@ -40,8 +40,8 @@ const about = ({ data }) => {
               >
                 codingcoach.io
               </a>{' '}
-              and I have made several contributions to other open source
-              projects like Gatsby. I also like writing technical articles about
+              and made several contributions to other open source
+              projects like Gatsby, for some reason I am always up for open source work. I also like writing technical articles about
               technologies I have used and find interesting. When I am not
               coding or writing technical articles I watch football, play
               football video games, argue about football on twitter, watch
