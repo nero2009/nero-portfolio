@@ -133,7 +133,7 @@ nav ul li a {
   cursor: pointer;
 }
 .inline-link {
-  color: #00aced;
+  color: #20399d;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -198,7 +198,10 @@ header {
   grid-template-columns: minmax(min-content, 590px);
   grid-column-gap: 30px;
   grid-row-gap: 60px;
-  margin: 50px 0;
+  margin: 50px 0 20px 0;
+  &__others {
+    margin-bottom: 50px;
+  }
 
   justify-content: center;
   @media only screen and (min-width: 768px) {
@@ -284,7 +287,7 @@ header {
   &__readMore {
     font-size: 0.8em;
     display: inline-block;
-    color: #00aced;
+    color: #20399d;
     text-decoration: none;
     &:hover {
       text-decoration: underline;

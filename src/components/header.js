@@ -36,8 +36,6 @@ export default class Header extends React.Component {
             description="Portfolio/blog site of finallynero"
           />
           <title>Nero</title>
-          <link rel="canonical" href="nero.netlify.com" />
-          <html lang="en" />
         </Helmet>
         <div className="header__border">
           <HeaderBorder className="header__border__image" />

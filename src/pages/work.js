@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import HeaderBorder from '../../assets/header-border.svg'
 import SEO from '../components/seo'
@@ -59,6 +59,20 @@ const work = ({ data }) => {
                 live: 'https://codingcoach.io/',
               }}
             />
+          </div>
+          <div className="portfolio-container__others">
+            <p>
+              You can check out some of my other interesting project on{' '}
+              <a
+                href="https://github.com/nero2009"
+                className="inline-link"
+                aria-label="github"
+                target="__blank"
+                rel="noopener noreferrer"
+              >
+                my github
+              </a>{' '}
+            </p>
           </div>
         </div>
       </div>

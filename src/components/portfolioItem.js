@@ -4,7 +4,6 @@ import ExternalLink from '../../assets/external.svg'
 import Img from 'gatsby-image'
 
 const portfolioItem = props => {
-  console.log(props)
   return (
     <React.Fragment>
       <div className="portfolio">
@@ -23,6 +22,7 @@ const portfolioItem = props => {
                 href={props.link.github}
                 target="__blank"
                 rel="noopener noreferrer"
+                aria-label="github"
               >
                 <Github style={{ width: 14, height: 20 }} />
               </a>
@@ -32,6 +32,7 @@ const portfolioItem = props => {
                 href={props.link.live}
                 target="__blank"
                 rel="noopener noreferrer"
+                aria-label="live demo"
               >
                 <ExternalLink style={{ width: 14, height: 20 }} />
               </a>

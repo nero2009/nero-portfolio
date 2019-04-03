@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Finallynero Portfolio`,
     description: `Hi, I am Nero, a frontend developer, open-source contributor, technical writer, dog lover and feminist.`,
+    siteUrl: `https://www.finallynero.dev`,
     author: `@finallynero`,
     social: [
       { title: 'Github', link: 'https://github.com/nero2009', icon: 'github' },
@@ -69,8 +70,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.finallynero.dev`,
+      },
+    },
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-offline`,
   ],
 }
