@@ -77,6 +77,19 @@ module.exports = {
       },
     },
     `gatsby-plugin-robots-txt`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'finallynero-portfolio',
+        short_name: 'finallynero',
+        start_url: '/',
+        background_color: '#94B2C6',
+        theme_color: '#94B2C6',
+        display: 'minimal-ui',
+        logo: 'src/images/logo-icon.svg',
+      },
+    },
     `gatsby-plugin-offline`,
+    `gatsby-plugin-favicon`,
   ],
 }
