@@ -35,7 +35,9 @@ export default function Template({ data }) {
           url={`${data.site.siteMetadata.siteUrl}${blog.frontmatter.path}`}
         />
         <div className="divider" />
-        <h4 className="article__date">Written by {blog.frontmatter.author}</h4>
+        <h4 className="article__author">
+          Written by {blog.frontmatter.author}
+        </h4>
         <h4 className="article__date">
           {date.toLocaleDateString('en-US', options)}
         </h4>

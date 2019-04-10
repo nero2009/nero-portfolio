@@ -353,6 +353,11 @@ header {
     color: #8e8e8e;
     font-weight: 400;
   }
+  &__author {
+    font-size: 1em;
+    color: #3b3b3b;
+    font-weight: 500;
+  }
 }
 .article-back-button {
   display: flex;
