@@ -30,17 +30,24 @@ export default function Template({ data }) {
           Back to articles
         </Link>
         <h1 className="article__title">{blog.frontmatter.title}</h1>
-        <Share
-          title={blog.frontmatter.title}
-          url={`${data.site.siteMetadata.siteUrl}${blog.frontmatter.path}`}
-        />
+
         <div className="divider" />
-        <h4 className="article__author">
-          Written by {blog.frontmatter.author}
-        </h4>
-        <h4 className="article__date">
-          {date.toLocaleDateString('en-US', options)}
-        </h4>
+        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <div>
+            <h4 className="article__author">
+              Written by {blog.frontmatter.author}
+            </h4>
+            <h4 className="article__date">
+              {date.toLocaleDateString('en-US', options)}
+            </h4>
+          </div>
+          <div>
+            <Share
+              title={blog.frontmatter.title}
+              url={`${data.site.siteMetadata.siteUrl}${blog.frontmatter.path}`}
+            />
+          </div>
+        </div>
         <div
           className="article"
           dangerouslySetInnerHTML={{ __html: blog.html }}

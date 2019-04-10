@@ -299,12 +299,11 @@ header {
   display: flex;
   justify-content: space-between;
   width: 80px;
-  margin-bottom: 20px;
+  margin: 20px 0;
 
   a {
     padding: 5px;
     border-radius: 50%;
-    border: 1px solid #666666;
     opacity: 1;
     &:hover {
       opacity: 1;
@@ -315,11 +314,11 @@ header {
     display: inline-flex;
 
     &.twitter {
-      background: #666666;
+      background: #00aced;
     }
 
     &.linkedin {
-      background: #666666;
+      background: #0077b5;
     }
   }
 
