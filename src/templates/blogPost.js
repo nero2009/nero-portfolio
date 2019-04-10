@@ -1,11 +1,19 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import Share from '../components/share'
 import Layout from '../components/layout'
 import Back from '../images/back-arrow.svg'
 import SEO from '../components/seo'
 
 export default function Template({ data }) {
   const blog = data.markdownRemark
+  let date = new Date(blog.frontmatter.date)
+  let options = {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }
   return (
     <Layout>
       <SEO
@@ -13,7 +21,7 @@ export default function Template({ data }) {
         description={blog.frontmatter.description}
       />
       <div className="layout-container">
-        <Link to="/blogs" className="article-back-button">
+        <Link to="/blogs/" className="article-back-button">
           <img
             src={Back}
             alt="back button"
@@ -22,8 +30,15 @@ export default function Template({ data }) {
           Back to articles
         </Link>
         <h1 className="article__title">{blog.frontmatter.title}</h1>
+        <Share
+          title={blog.frontmatter.title}
+          url={`${data.site.siteMetadata.siteUrl}${blog.frontmatter.path}`}
+        />
         <div className="divider" />
         <h4 className="article__date">Written by {blog.frontmatter.author}</h4>
+        <h4 className="article__date">
+          {date.toLocaleDateString('en-US', options)}
+        </h4>
         <div
           className="article"
           dangerouslySetInnerHTML={{ __html: blog.html }}
@@ -43,6 +58,11 @@ export const articleQuery = graphql`
         author
         date
         description
+      }
+    }
+    site {
+      siteMetadata {
+        siteUrl
       }
     }
   }

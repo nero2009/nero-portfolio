@@ -4,6 +4,7 @@ import ExternalLink from '../../assets/external.svg'
 import Img from 'gatsby-image'
 
 const portfolioItem = props => {
+  console.log(props)
   return (
     <React.Fragment>
       <div className="portfolio">

@@ -294,7 +294,43 @@ header {
     }
   }
 }
+
+.share {
+  display: flex;
+  justify-content: space-between;
+  width: 80px;
+  margin-bottom: 20px;
+
+  a {
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid #666666;
+    opacity: 1;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__container {
+    display: inline-flex;
+
+    &.twitter {
+      background: #666666;
+    }
+
+    &.linkedin {
+      background: #666666;
+    }
+  }
+
+  &__icon {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+  }
+}
 .article {
+  color: #333333;
   p {
     line-height: 1.8;
     font-size: 1.1em;
