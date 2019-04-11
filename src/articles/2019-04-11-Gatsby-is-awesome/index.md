@@ -6,9 +6,11 @@ author: Nero Adaware
 description: In this article I will be talking about some of Gatsby's awesome features, how they helped me learn React and my personal website...
 ---
 
+![Gatsby](https://cdn-images-1.medium.com/max/1200/1*G9aVAI3aezHLw_JsiCfB1Q.jpeg)
+
 ## Gatsby is Awesome
 
-In this article I will be talking about some of Gatsby's awesome features, how they helped me learn React and my personal website.
+In this article I will be talking about some of Gatsby's awesome features, how it helped me learn React and my personal website.
 
 #### What is Gatsby js?
 
