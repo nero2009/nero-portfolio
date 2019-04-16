@@ -6,18 +6,18 @@ author: Nero Adaware
 description: In this article I will be talking about some of Gatsby's awesome features, how they helped me learn React and my personal website...
 ---
 
-![Gatsby](https://cdn-images-1.medium.com/max/1200/1*G9aVAI3aezHLw_JsiCfB1Q.jpeg)
+![Gatsby](./gatsby.jpeg)
 
 ## Gatsby is Awesome
 
 In this article I will be talking about some of Gatsby's awesome features, how it helped me learn React and my personal website.
 
-#### What is Gatsby js?
+### What is Gatsby js?
 
 Gatsby is simply a static site framework built on top of React. It is similar to other static site generators like Hugo, Jekkyl, Nextjs, Nuxtjs e.t.c. If you don't know what a static site generator is then it is a framework or library that generates the HTML, CSS and javascript files at build time. Gatsby is also excellent in building web applications because you get to enjoy the benefits of a static site like speed(blazing fast) and also be able to build dynamic websites.
 [Gatsby for web applications ](https://www.gatsbyjs.org/blog/2018-11-07-gatsby-for-apps/)
 
-#### What interested me in Gatsby
+### What interested me in Gatsby
 
 Less than Two years ago I started out my journey to learn how to code, after 6-8 months of learning Javascript and React, I felt I needed a portfolio/personal website where I could showcase my side projects and also show my ability to build a website, I first considered building it with React but it was overkill and I needed a backend in case I needed to start blogging, so I continued my search, looking at different developers personal sites trying to figure out which technology they used to build it and there was one that caught my eye(honestly I can't remember the dev's name/website...my bad) it was simple and at the bottom I saw "built with Jekkyl", After a google search that was when I first heard of a static site generator.
 What is a static site generator? I asked myself, You know the rabbit hole of google searches you can get into as a developer looking for answers, I never really understood what static site generators were at that point but I ran into Gatsby and the best thing about it was that it was built on React so I had a chance to hone my React skills while learning a need technology and still try to figure out what static site generators are.
@@ -32,7 +32,7 @@ That is the homepage of my first Gatsby portfolio/blog.
 
 The design wasn't the best in the world but it was working. I learned a lot building the project, for the first time I used a CMS(content management system), it also gave me a basic understanding of Graphql while I was able to improve my understanding of React. I used styled-components for components for the styling and contentful as my CMS.
 
-#### Rebuilding my portfolio site
+### Rebuilding my portfolio site
 
 When Gatsby v2 came out I decided to rebuild/redesign my portfolio, which was 2 months after I finished my portfolio site. I updated some API's that changed in v2, ditched styled-components for SCSS and contentful for markdown. I made it responsive but I could do much about the design because I was still terrible at designing.
 
