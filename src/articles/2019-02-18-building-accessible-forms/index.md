@@ -3,7 +3,7 @@ path: /building-accessible-forms
 date: 2019-02-18
 title: Building Accessible(A11y) Forms
 author: Nero Adaware
-description: According to [Wikipedia](https://en.wikipedia.org/wiki/Accessibility), It is the design of products, devices, services or environments, for people with disabilities. Accessibility in software...
+description: According to Wikipedia, It is the design of products, devices, services or environments, for people with disabilities. Accessibility in software...
 ---
 
 ### What is Accessibility(a11y)?

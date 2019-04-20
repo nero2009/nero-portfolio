@@ -256,7 +256,7 @@ They also support comparison operators like `==`, `!=`, `<`, `>`, `>=`, `<=` and
 
 You can check out this article for more on Operators
 
-{% link https://dev.to/sarah_chima/sass-operators-56f %}
+[Sass Operators](https://dev.to/sarah_chima/sass-operators-56f)
 
 #### Color Functions
 

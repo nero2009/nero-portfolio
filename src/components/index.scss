@@ -133,10 +133,15 @@ nav ul li a {
   cursor: pointer;
 }
 .inline-link {
-  color: #20399d;
+  color: #333;
+  -webkit-box-shadow: inset 0 -6px 0 #a9cde0;
+  box-shadow: inset 0 -6px 0 #a9cde0;
+  transition-property: box-shadow;
+  transition-duration: 0.8s;
   text-decoration: none;
   &:hover {
-    text-decoration: underline;
+    -webkit-box-shadow: inset 0 -20px 0 #a9cde0;
+    box-shadow: inset 0 -20px 0 #a9cde0;
   }
 }
 .divider {
@@ -334,6 +339,18 @@ header {
     line-height: 1.8;
     font-size: 1.1em;
     color: #333;
+    a {
+      color: #666;
+      -webkit-box-shadow: inset 0 -6px 0 #a9cde0;
+      box-shadow: inset 0 -6px 0 #a9cde0;
+      transition-property: box-shadow;
+      transition-duration: 0.8s;
+      text-decoration: none;
+      &:hover {
+        -webkit-box-shadow: inset 0 -20px 0 #a9cde0;
+        box-shadow: inset 0 -20px 0 #a9cde0;
+      }
+    }
   }
   &__backButton {
     display: flex;
