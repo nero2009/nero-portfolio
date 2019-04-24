@@ -1,7 +1,7 @@
 ---
 path: /redux-devtools-stack-trace
-date: 2019-04-11
-title: Redux Devtools - Action Stack Trace
+date: 2019-04-23
+title: Redux Devtools - Actions Stack Trace
 author: Nero Adaware
 description: New feature added to Redux devtools, it helps you track where a particular redux action was dispatched from.
 ---
