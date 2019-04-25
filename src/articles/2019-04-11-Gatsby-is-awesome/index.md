@@ -6,7 +6,8 @@ author: Nero Adaware
 description: In this article I will be talking about some of Gatsby's awesome features, how they helped me learn React and my personal website...
 ---
 
-![Gatsby](./gatsby.jpeg)
+<!-- ![Gatsby](./gatsby.jpeg) -->
+<img src="./gatsby.jpeg" alt ="gatsby">
 
 ## Gatsby is Awesome
 
@@ -24,11 +25,14 @@ What is a static site generator? I asked myself, You know the rabbit hole of goo
 
 The documentation is one of the best amongst all the libraries and frameworks I have used, it provided a starter pack that really helped me understand how it worked and it gave me a working Gatsby application to build upon. That time I used the Gatsby-blog-starter built by Kyle Matthews(himself, I think).
 
-![Homepage](./firstblog.PNG)
+<!-- ![Homepage](./firstblog.PNG) -->
+
+<img src="./firstblog.PNG" alt ="Homepage">
 
 That is the homepage of my first Gatsby portfolio/blog.
 
-![About me page](./about.PNG)
+<img src="./about.PNG" alt ="About me">
+<!-- ![About me page](./about.PNG) -->
 
 The design wasn't the best in the world but it was working. I learned a lot building the project, for the first time I used a CMS(content management system), it also gave me a basic understanding of Graphql while I was able to improve my understanding of React. I used styled-components for components for the styling and contentful as my CMS.
 

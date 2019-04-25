@@ -6,13 +6,16 @@ author: Nero Adaware
 description: New feature added to Redux devtools, it helps you track where a particular redux action was dispatched from.
 ---
 
-![Cover image](./redux.png)
+<!-- ![Cover image](./redux.png) -->
+<img src="./redux.png">
 
 I recently watched on Youtube Mark Erikson's talk 'The State of Redux' in Reacthaton 2019. Apart from talking about the current state of redux(Yes!! Redux is not dead) he also spoke about a new feature added to the Redux developer tools. This is called the action stack trace, it helps you track where a particular Redux action was dispatched from. This feature is disabled by default when enabled a Trace tab is added to your Redux devtools and when you click on a particular action it shows you the stack trace of where that action was dispatched from.
 
 I think this is a big addition to the Redux devtools because not long ago I had to deal with a bug where an action was dispatched in my application but I didn't know where or what dispatched that action.
 
-![Action stack trace demo](https://user-images.githubusercontent.com/7957859/50161148-a1639300-02e3-11e9-80e7-18d3215a0bf8.gif)
+<!-- ![Action stack trace demo](https://user-images.githubusercontent.com/7957859/50161148-a1639300-02e3-11e9-80e7-18d3215a0bf8.gif) -->
+
+<img src="https://user-images.githubusercontent.com/7957859/50161148-a1639300-02e3-11e9-80e7-18d3215a0bf8.gif" width="100%">
 
 > The above image was gotten from [Redux Devtools Extension Docs](https://github.com/zalmoxisus/redux-devtools-extension/blob/master/docs/Features/Trace.md)
 
