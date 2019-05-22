@@ -4,6 +4,7 @@ import Share from '../components/share'
 import Layout from '../components/layout'
 import Back from '../images/back-arrow.svg'
 import SEO from '../components/seo'
+import Me from '../images/chiefThatsit.png'
 
 // class Template extends Component {
 //   state = {
@@ -125,6 +126,20 @@ export default function Template({ data }) {
           className="article"
           dangerouslySetInnerHTML={{ __html: blog.html }}
         />
+        <div className="divider" />
+        <div className="article__footer">
+          <img src={Me} alt="chiefThatsit" />
+          <p>
+            Personal Blog of{' '}
+            <a
+              href="https://twitter.com/finallynero"
+              target="__blank"
+              rel="noopener"
+            >
+              Nero Adaware
+            </a>
+          </p>
+        </div>
       </div>
     </Layout>
   )
