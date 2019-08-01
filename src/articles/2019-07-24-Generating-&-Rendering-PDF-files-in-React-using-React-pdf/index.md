@@ -342,7 +342,7 @@ This `Movie.jsx` component is the template of the PDF we are generating, Here we
 
 ### Demo Application
 
-https://codesandbox.io/s/react-pdf-demo-i1ted
+https://codesandbox.io/s/react-pdf-demo-i1ted?view=split
 
 ## Conclusion
 
