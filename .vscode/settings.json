@@ -1,5 +1,8 @@
 {
-    "workbench.colorCustomizations": {
-        "tab.unfocusedActiveBorder": "#fff0"
-    }
+  "workbench.colorCustomizations": {
+    "tab.unfocusedActiveBorder": "#fff0"
+  },
+  "[markdown]": {
+    "editor.formatOnSave": true
+  }
 }

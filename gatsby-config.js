@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Finallynero Portfolio`,
-    description: `Hi, I am Nero, a frontend developer, open-source contributor, technical writer, dog lover and feminist.`,
+    description: `Hi, I am Nero, a Frontend developer, Open-source contributor, Technical writer, Dog lover and Humanist.`,
     siteUrl: `https://www.finallynero.dev`,
     author: `@finallynero`,
     social: [
@@ -39,6 +39,7 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-embedder`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {},
