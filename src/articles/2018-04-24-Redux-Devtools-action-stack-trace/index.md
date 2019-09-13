@@ -7,7 +7,7 @@ description: New feature added to Redux devtools, it helps you track where a par
 ---
 
 <!-- ![Cover image](./redux.png) -->
-<img src="./redux.png">
+<img src="./redux.png" >
 
 I recently watched on Youtube Mark Erikson's talk 'The State of Redux' in Reacthaton 2019. Apart from talking about the current state of redux(Yes!! Redux is not dead) he also spoke about a new feature added to the Redux developer tools. This is called the action stack trace, it helps you track where a particular Redux action was dispatched from. This feature is disabled by default when enabled a Trace tab is added to your Redux devtools and when you click on a particular action it shows you the stack trace of where that action was dispatched from.
 

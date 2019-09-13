@@ -24,7 +24,7 @@ const portfolioItem = props => {
                 rel="noopener noreferrer"
                 aria-label="github"
               >
-                <Github style={{ width: 14, height: 20 }} />
+                <Github style={{ width: 20, height: 20 }} />
               </a>
             )}
             {props.link.live && (
@@ -34,7 +34,7 @@ const portfolioItem = props => {
                 rel="noopener noreferrer"
                 aria-label="live demo"
               >
-                <ExternalLink style={{ width: 14, height: 20 }} />
+                <ExternalLink style={{ width: 20, height: 20 }} />
               </a>
             )}
           </div>

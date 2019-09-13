@@ -20,7 +20,6 @@ const about = ({ data }) => {
           <div className="about__image">
             <figure>
               <Img sizes={data.aboutImage.sizes} />
-              {/* <img src="../images/chiefThatsit.png" alt="" /> */}
             </figure>
           </div>
           <div className="about ">
@@ -28,7 +27,7 @@ const about = ({ data }) => {
             <p className="about__text">
               I am a{' '}
               <span className="about__text-bold">Frontend developer</span> who
-              specializes in React, Gatsby, Vue js. I quite familiar with the
+              specializes in React, Gatsby and Vue js. I quite familiar with the
               toolings around the React ecosystem. I also play with Figma
               sometimes hoping that I can up my UI design skillset. I am an
               active open source contributor at{' '}
@@ -40,14 +39,40 @@ const about = ({ data }) => {
               >
                 codingcoach.io
               </a>{' '}
-              and made several contributions to other open source
-              projects like Gatsby, for some reason I am always up for open source work. I also like writing technical articles about
-              technologies I have used and find interesting. When I am not
-              coding or writing technical articles I watch football, play
-              football video games, argue about football on twitter, watch
-              basketball and listen to awesome podcasts like Casefile true
-              crime, Syntax, That Peter Crouch podcast e.t.c. Finally I am an
-              advocate for{' '}
+              and made several contributions to other open source projects like
+              Gatsby, for some reason I am always up for open source work. I
+              also like writing technical articles about technologies I have
+              used and find interesting. When I am not coding or writing
+              technical articles I watch football, play football video games,
+              argue about football on twitter, watch basketball and listen to
+              awesome podcasts like{' '}
+              <a
+                href="https://casefilepodcast.com/"
+                target="__blank"
+                rel="noopener noreferrer"
+                className="inline-link"
+              >
+                Casefile true crime
+              </a>
+              ,{' '}
+              <a
+                href="https://syntax.fm/"
+                target="__blank"
+                rel="noopener noreferrer"
+                className="inline-link"
+              >
+                Syntax
+              </a>
+              ,{' '}
+              <a
+                href="https://www.bbc.co.uk/programmes/p06kyljg/episodes/downloads"
+                target="__blank"
+                rel="noopener noreferrer"
+                className="inline-link"
+              >
+                That Peter Crouch podcast
+              </a>{' '}
+              e.t.c. Finally I am an advocate for{' '}
               <a
                 href="https://dev.to/finallynero/building-accessible-forms--46ke"
                 target="__blank"
