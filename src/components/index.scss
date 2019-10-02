@@ -333,6 +333,62 @@ header {
     height: 16px;
   }
 }
+
+.floating-share {
+  display: flex;
+  position: fixed;
+  top: 30vh;
+  flex-direction: column;
+  left: 10px;
+  height: 100px;
+  justify-content: space-between;
+
+  button {
+    background: #bababa;
+    padding: 5px;
+    border-radius: 50%;
+    border: 0;
+    opacity: 1;
+    /*optional*/
+    font-family: arial, sans-serif;
+    /*input has OS specific font-family*/
+    // color: #069;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 3px 0;
+    z-index: 10;
+    position: relative;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &.hide {
+    a {
+      transform: scale(0);
+    }
+    button {
+      transform: scale(0);
+    }
+  }
+  a {
+    transition: 0.3s;
+    margin: 3px 0;
+    z-index: 10;
+    position: relative;
+  }
+  a {
+    padding: 5px;
+    border-radius: 50%;
+    opacity: 1;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    display: none;
+  }
+}
 .article {
   h1,
   h2,
