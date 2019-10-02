@@ -82,6 +82,20 @@ class Template extends Component {
             title={blog.frontmatter.title}
             url={`${data.site.siteMetadata.siteUrl}${blog.frontmatter.path}`}
           />
+          <div className="divider" />
+          <div className="article__footer">
+            <img src={Me} alt="chiefThatsit" />
+            <p>
+              Personal Blog of{' '}
+              <a
+                href="https://twitter.com/finallynero"
+                target="__blank"
+                rel="noopener"
+              >
+                Nero Adaware
+              </a>
+            </p>
+          </div>
         </div>
       </Layout>
     )
