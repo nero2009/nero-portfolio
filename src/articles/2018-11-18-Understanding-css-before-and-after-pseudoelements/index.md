@@ -60,7 +60,7 @@ It is also possible to combine pseudo-elements. Note: According to the CSS3 spec
 
 A Simple demo demonstrating this is below
 
-https://codepen.io/finallynero/pen/NEbgJM %}
+https://codepen.io/finallynero/pen/NEbgJM 
 
 We used the pseudo-elements to add quotes to a sentence.
 
