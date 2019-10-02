@@ -2,4 +2,4 @@
 
 ---
 
-Check out my Site [https://nero.netlify.com/](https://nero.netlify.com/)
+Check out my Site [https://finallynero.dev/](https://finallynero.dev/)
