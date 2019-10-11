@@ -25,10 +25,9 @@ const about = ({ data }) => {
           <div className="about ">
             <p className="about__title">Hi, I am Nero.</p>
             <p className="about__text">
-              I am a{' '}
-              <span className="about__text-bold">Frontend developer</span> who
-              specializes in React, Gatsby and Vue js. I quite familiar with the
-              toolings around the React ecosystem. I also play with Figma
+              I am a <strong>Frontend developer</strong> who specializes in{' '}
+              <strong>React, Gatsby and Vue js</strong>. I quite familiar with
+              the toolings around the React ecosystem. I also play with Figma
               sometimes hoping that I can up my UI design skillset. I am an
               active open source contributor at{' '}
               <a

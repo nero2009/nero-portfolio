@@ -3,7 +3,7 @@ import Social from './social'
 
 const footer = () => {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="footer__icons">
         <Social />
       </div>
@@ -16,7 +16,7 @@ const footer = () => {
           by Finallynero
         </p>
       </div>
-    </div>
+    </footer>
   )
 }
 
