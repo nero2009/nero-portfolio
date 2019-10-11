@@ -3,7 +3,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 const floatingshare = props => {
   return (
-    <div className={`floating-share` + (props.show ? '' : ' hide')}>
+    <aside className={`floating-share` + (props.show ? '' : ' hide')}>
       <a
         href={`https://twitter.com/intent/tweet?text=${props.title} by Nero Adaware(@finallynero) ${props.url}`}
         target="_blank"
@@ -41,7 +41,7 @@ const floatingshare = props => {
           />
         </button>
       </CopyToClipboard>
-    </div>
+    </aside>
   )
 }
 

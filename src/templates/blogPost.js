@@ -46,15 +46,17 @@ class Template extends Component {
         />
 
         <div className="layout-container">
-          <Link to="/blogs/" className="article-back-button">
-            <img
-              src={Back}
-              alt="back button"
-              className="article-back-button__text"
-            />
-            Back to articles
-          </Link>
-          <h1 className="article__title">{blog.frontmatter.title}</h1>
+          <header>
+            <Link to="/blogs/" className="article-back-button">
+              <img
+                src={Back}
+                alt="back button"
+                className="article-back-button__text"
+              />
+              Back to articles
+            </Link>
+            <h1 className="article__title">{blog.frontmatter.title}</h1>
+          </header>
 
           <div className="divider" />
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -73,7 +75,7 @@ class Template extends Component {
               />
             </div>
           </div>
-          <div
+          <article
             className="article"
             dangerouslySetInnerHTML={{ __html: blog.html }}
           />
@@ -83,7 +85,7 @@ class Template extends Component {
             url={`${data.site.siteMetadata.siteUrl}${blog.frontmatter.path}`}
           />
           <div className="divider" />
-          <div className="article__footer">
+          <footer className="article__footer">
             <img src={Me} alt="chiefThatsit" />
             <p>
               Personal Blog of{' '}
@@ -95,7 +97,7 @@ class Template extends Component {
                 Nero Adaware
               </a>
             </p>
-          </div>
+          </footer>
         </div>
       </Layout>
     )
