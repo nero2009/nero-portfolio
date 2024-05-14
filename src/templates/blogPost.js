@@ -8,7 +8,6 @@ import FloatingShare from '../components/floatingshare'
 import Me from '../images/chiefThatsit.png'
 
 const Template = ({ data }) => {
-  console.log('data :>> ', data);
   const [showShare, setShowShare] = useState(false);
 
   useEffect(() => {
