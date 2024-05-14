@@ -1,33 +1,47 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Typist from 'react-typist'
-import HeroImage from '../../assets/coding1.svg'
-import BgHero from '../../assets/hero-header.svg'
 
 const Hero = ({ data }) => {
   return (
     <section className="hero" style={{ textAlign: 'center' }}>
-      <div className="hero__image-mobile">
-        <HeroImage className="hero__image" />
-      </div>
-      <div className="hero__image-desktop">
-        <BgHero className="hero__image-desktop__image" />
-      </div>
-      <div className="hero__image-text">
-        <h1 className="hero__text">
-          Hi, I'm Nero, I'm a
-          <Typist
-            cursor={{
-              show: false,
-            }}
-          >
-            <span style={{ color: '#FE5F55' }}>Dog Lover</span>
-            <Typist.Backspace count={9} delay={300} />
-            <span style={{ color: '#4F6367' }}>Man Utd fan</span>
-            <Typist.Backspace count={11} delay={300} />
-            <span style={{ color: '#4F86C6' }}>Frontend Developer</span>
-          </Typist>
-        </h1>
+      <div className="content">
+        <h1 className="introtext">Hi, I'm Nero </h1>
+        <p className="introsubtext">
+          I am software engineer with experience building fullstack web and
+          mobile using Typescript, Node, React, React Native and Golang.
+        </p>
+        <p>
+          At the moment, I am a fullstack engineer and lead the mobile
+          development team at{' '}
+          <a href="https://halsahemma.se/" className={`inline-link${Math.floor(Math.random() * 3) + 1}`}>
+            Hälsa Hemma
+          </a>
+          . In the past, I have worked with{' '}
+          <a href="https://quidax.com/" className={`inline-link${Math.floor(Math.random() * 3) + 1}`}>
+            Quidax
+          </a>{' '}
+          ,{' '}
+          <a href="https://almworks.com/" className={`inline-link${Math.floor(Math.random() * 3) + 1}`}>
+            Almworks
+          </a>{' '}
+          and{' '}
+          <a href="https://www.hidglobal.com/" className={`inline-link${Math.floor(Math.random() * 3) + 1}`}>
+            HID global
+          </a>{' '}
+          .
+        </p>
+        <p className="introsubtext">
+          Over the years I have been lucky to learn from and lead engineers to
+          deliver quality products in distributed and onsite teams.
+        </p>
+        <p className="introsubtext">
+          Outside work you will find me watching videos about how random
+          technologies work, daydreaming about automating my day to day
+          processes, watching football or listening to podcasts.
+        </p>
+        <p className="introsubtext">
+          You can contact me at nero[2][0][0][9](at)rocketmail(dot)com{' '}
+        </p>
       </div>
     </section>
   )
