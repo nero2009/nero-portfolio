@@ -19,7 +19,7 @@ const about = ({ data }) => {
         <div className="about-container">
           <div className="about__image">
             <figure>
-              <Img sizes={data.aboutImage.sizes} />
+              <Img fluid={data.aboutImage.fluid} />
             </figure>
           </div>
           <div className="about ">
