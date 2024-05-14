@@ -102,8 +102,8 @@ export const aboutQuery = graphql`
     aboutImage: imageSharp(
       fluid: { originalName: { regex: "/chiefThatsit.png/" } }
     ) {
-      sizes(maxWidth: 800) {
-        ...GatsbyImageSharpSizes
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
       }
     }
   }

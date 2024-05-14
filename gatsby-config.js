@@ -31,7 +31,6 @@ module.exports = {
         anonymize: true,
       },
     },
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -51,7 +50,6 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-remark-embedder`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {},
@@ -100,9 +98,9 @@ module.exports = {
         theme_color: '#94B2C6',
         display: 'minimal-ui',
         logo: 'src/images/logo-icon.svg',
+        icon: 'src/images/logo-icon.svg',
       },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-favicon`,
   ],
 }

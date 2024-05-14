@@ -40,8 +40,8 @@ export default props => (
         heroImage: imageSharp(
           fluid: { originalName: { regex: "/hero-header.png/" } }
         ) {
-          sizes(maxWidth: 800) {
-            ...GatsbyImageSharpSizes
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
