@@ -66,7 +66,6 @@ function SEO({ description, lang, meta, keywords, title }) {
   //   />
   // )
 
-  const {  } = useSiteMetadata()
 }
 
 SEO.defaultProps = {
