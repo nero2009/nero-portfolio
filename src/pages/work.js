@@ -15,7 +15,7 @@ const work = ({ data }) => {
           <HeaderBorder style={{ width: 100 }} />
           <div className="portfolio-container">
             <PortfolioItem
-              image={data.portfolioImage1.sizes}
+              image={data.portfolioImage1.fluid}
               title="Save and Flex"
               tech="React"
               link={{
@@ -24,7 +24,7 @@ const work = ({ data }) => {
               }}
             />
             <PortfolioItem
-              image={data.portfolioImage2.sizes}
+              image={data.portfolioImage2.fluid}
               title="Personal website"
               tech="Gatsby"
               link={{
@@ -33,7 +33,7 @@ const work = ({ data }) => {
               }}
             />
             <PortfolioItem
-              image={data.portfolioImage3.sizes}
+              image={data.portfolioImage3.fluid}
               title="Expense Manager"
               tech="React, Redux, Firebase"
               link={{
@@ -42,7 +42,7 @@ const work = ({ data }) => {
               }}
             />
             <PortfolioItem
-              image={data.portfolioImage4.sizes}
+              image={data.portfolioImage4.fluid}
               title="Company Portal"
               tech="Figma, Gatsby"
               link={{
@@ -51,7 +51,7 @@ const work = ({ data }) => {
               }}
             />
             <PortfolioItem
-              image={data.portfolioImage5.sizes}
+              image={data.portfolioImage5.fluid}
               title="Coding Coach"
               tech="React, Tailwind Css"
               link={{
@@ -85,36 +85,36 @@ export const portfolioQuery = graphql`
     portfolioImage1: imageSharp(
       fluid: { originalName: { regex: "/savenflex.PNG/" } }
     ) {
-      sizes(maxWidth: 512, maxHeight: 300) {
-        ...GatsbyImageSharpSizes
+      fluid(maxWidth: 512, maxHeight: 300) {
+        ...GatsbyImageSharpFluid
       }
     }
     portfolioImage2: imageSharp(
       fluid: { originalName: { regex: "/Nero-site.png/" } }
     ) {
-      sizes(maxWidth: 512, maxHeight: 300) {
-        ...GatsbyImageSharpSizes
+      fluid(maxWidth: 512, maxHeight: 300) {
+        ...GatsbyImageSharpFluid
       }
     }
     portfolioImage3: imageSharp(
       fluid: { originalName: { regex: "/Expense-Manager.png/" } }
     ) {
-      sizes(maxWidth: 512, maxHeight: 300) {
-        ...GatsbyImageSharpSizes
+      fluid(maxWidth: 512, maxHeight: 300) {
+        ...GatsbyImageSharpFluid
       }
     }
     portfolioImage4: imageSharp(
       fluid: { originalName: { regex: "/CSRL-Portal.png/" } }
     ) {
-      sizes(maxWidth: 512, maxHeight: 300) {
-        ...GatsbyImageSharpSizes
+      fluid(maxWidth: 512, maxHeight: 300) {
+        ...GatsbyImageSharpFluid
       }
     }
     portfolioImage5: imageSharp(
       fluid: { originalName: { regex: "/Coding-coach.png/" } }
     ) {
-      sizes(maxWidth: 512, maxHeight: 300) {
-        ...GatsbyImageSharpSizes
+      fluid(maxWidth: 512, maxHeight: 300) {
+        ...GatsbyImageSharpFluid
       }
     }
   }

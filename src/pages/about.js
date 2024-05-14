@@ -19,7 +19,7 @@ const about = ({ data }) => {
         <div className="about-container">
           <div className="about__image">
             <figure>
-              <Img sizes={data.aboutImage.sizes} />
+              <Img fluid={data.aboutImage.fluid} />
             </figure>
           </div>
           <div className="about ">
@@ -102,8 +102,8 @@ export const aboutQuery = graphql`
     aboutImage: imageSharp(
       fluid: { originalName: { regex: "/chiefThatsit.png/" } }
     ) {
-      sizes(maxWidth: 800) {
-        ...GatsbyImageSharpSizes
+      fluid(maxWidth: 800) {
+        ...GatsbyImageSharpFluid
       }
     }
   }

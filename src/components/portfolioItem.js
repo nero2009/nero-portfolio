@@ -12,7 +12,7 @@ const portfolioItem = props => {
             <div className="tab__button" />
             <div className="tab__button" />
           </div>
-          <Img sizes={props.image} />
+          <Img fluid={props.image} />
         </div>
         <div className="portfolio__description">
           <p>{props.title}</p>

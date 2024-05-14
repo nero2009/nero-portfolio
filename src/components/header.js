@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import { Helmet } from 'react-helmet'
 import Menu from '../../assets/icon-menu.svg'
 import Close from '../../assets/icon-close.svg'
 import HeaderBorder from '../../assets/header-border.svg'
@@ -28,7 +27,7 @@ export default class Header extends React.Component {
     const { active } = this.state
     return (
       <div className="container">
-        <Helmet>
+        {/* <Helmet>
           <meta
             charSet="utf-8"
             name="personal site"
@@ -36,7 +35,7 @@ export default class Header extends React.Component {
             description="Portfolio/blog site of finallynero"
           />
           <title>Nero</title>
-        </Helmet>
+        </Helmet> */}
         <div className="header__border">
           <HeaderBorder className="header__border__image" />
         </div>
@@ -60,16 +59,6 @@ export default class Header extends React.Component {
                 <li>
                   <Link activeClassName="active-nav" to="/">
                     Home
-                  </Link>
-                </li>
-                <li>
-                  <Link activeClassName="active-nav" to="/about/">
-                    About
-                  </Link>{' '}
-                </li>
-                <li>
-                  <Link activeClassName="active-nav" to="/work/">
-                    Work
                   </Link>
                 </li>
                 <li>
