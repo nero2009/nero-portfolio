@@ -1,6 +1,6 @@
 ---
 path: /sharing-database-connections-in-golang
-date: 2025-05-15
+date: 2024-05-15
 title: Sharing Database connections in golang 
 author: Nero Adaware
 description: Sometimes we need to share database connections across our application, in this article we will be looking at how to share database connections in golang.
