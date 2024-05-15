@@ -18,5 +18,13 @@ export const onRenderBody = ({ setHeadComponents }) => {
       crossOrigin="anonymous"
       key="interFont"
     />,
+    <link
+      rel="preload"
+      href="/fonts/Arimo-Bold.ttf"
+      as="font"
+      type="font/ttf"
+      crossOrigin="anonymous"
+      key="interFont"
+    />,
   ])
 }

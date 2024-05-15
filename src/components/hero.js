@@ -5,12 +5,13 @@ const Hero = ({ data }) => {
   return (
     <section className="hero" style={{ textAlign: 'center' }}>
       <div className="content">
-        <h1 className="introtext">Hi, I'm Nero </h1>
+        <h1 className="introtext">Hi, I'm</h1>
+        <h2 className="introtext1">Nero Adaware</h2>
         <p className="introsubtext">
           I am software engineer with experience building fullstack web and
           mobile using Typescript, Node, React, React Native and Golang.
         </p>
-        <p>
+        <p className='introsubtext'>
           At the moment, I am a fullstack engineer and lead the mobile
           development team at{' '}
           <a href="https://halsahemma.se/" className={`inline-link${Math.floor(Math.random() * 3) + 1}`}>
