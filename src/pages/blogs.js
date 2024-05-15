@@ -6,6 +6,9 @@ import Blog from '../components/blog'
 import HeaderBorder from '../../assets/header-border.svg'
 
 const blogs = ({ data }) => {
+  const sortedByDate = data.allMarkdownRemark.edges.sort(
+    (a, b) => new Date(a.node.frontmatter.date) - new Date(b.node.frontmatter.date)
+  )
   return (
     <Layout>
       <SEO title="Blog" />
@@ -33,7 +36,7 @@ const blogs = ({ data }) => {
             </a>
           </p>
           <section className="post-container">
-            {data.allMarkdownRemark.edges.map(post => (
+            {sortedByDate.map(post => (
               <Blog
                 title={post.node.frontmatter.title}
                 date={post.node.frontmatter.date}

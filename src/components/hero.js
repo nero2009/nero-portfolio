@@ -40,8 +40,9 @@ const Hero = ({ data }) => {
           technologies work, daydreaming about automating my day to day
           processes, watching football or listening to podcasts.
         </p>
+       
         <p className="introsubtext">
-          You can contact me at nero[2][0][0][9](at)rocketmail(dot)com{' '}
+          You can contact me at  <a href="mailto:nero[2][0][0][9](at)rocketmail(dot)com" className={`inline-link${Math.floor(Math.random() * 3) + 1}`}>nero[2][0][0][9](at)rocketmail(dot)com</a>
         </p>
       </div>
     </section>
