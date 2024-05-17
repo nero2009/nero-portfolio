@@ -1,8 +1,8 @@
 <svg width="1440" height="6" viewBox="0 0 1440 6" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" >
-<rect width="283" height="6" fill="#B8D8D8">
+<rect class='rect1' width="283" height="6" fill="#B8D8D8">
 </rect>
-<rect x="283" width="281" height="6" fill="#9EC6A7"/>
-<rect x="564" width="281" height="6" fill="#81C9E2"/>
-<rect x="845" width="281" height="6" fill="#CD97A0"/>
-<rect x="1126" width="314" height="6" fill="#B8D8D8"/>
+<rect class='rect2' x="283" width="281" height="6" fill="#9EC6A7"/>
+<rect class='rect3' x="564" width="281" height="6" fill="#81C9E2"/>
+<rect class='rect4' x="845" width="281" height="6" fill="#CD97A0"/>
+<rect class='rect5' x="1126" width="314" height="6" fill="#B8D8D8"/>
 </svg>
