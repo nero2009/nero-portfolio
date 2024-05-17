@@ -7,6 +7,7 @@ module.exports = {
     title: `Finallynero Portfolio`,
     description: `Hi, I am Nero, a Frontend developer, Open-source contributor, Technical writer, Dog lover and Humanist.`,
     siteUrl: `https://www.finallynero.dev`,
+    image: `/images/logo-icon.svg`,
     author: `@finallynero`,
     social: [
       { title: 'Github', link: 'https://github.com/nero2009', icon: 'github' },

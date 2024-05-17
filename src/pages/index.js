@@ -5,9 +5,12 @@ import SEO from '../components/seo'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
     <Hero />
   </Layout>
+)
+
+export const Head = () => (
+  <SEO title="Home" description={'Home page of Nero Adaware website'} />
 )
 
 export default IndexPage
