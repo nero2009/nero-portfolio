@@ -63,7 +63,7 @@ export default class Header extends React.Component {
                 </li>
                 <li>
                   <Link activeClassName="active-nav" to="/blogs/">
-                    Blog
+                    Articles
                   </Link>
                 </li>
               </ul>

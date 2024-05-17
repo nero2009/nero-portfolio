@@ -9,7 +9,7 @@ const Hero = ({ data }) => {
         <h2 className="introtext1">Nero Adaware</h2>
         <p className="introsubtext">
           I am software engineer with experience building fullstack web and
-          mobile using Typescript, Node, React, React Native and Golang.
+          mobile applications using Typescript, Node, React, React Native and Golang.
         </p>
         <p className='introsubtext'>
           At the moment, I am a fullstack engineer and lead the mobile
@@ -17,19 +17,6 @@ const Hero = ({ data }) => {
           <a href="https://halsahemma.se/" className={`inline-link${Math.floor(Math.random() * 3) + 1}`}>
             Hälsa Hemma
           </a>
-          . In the past, I have worked with{' '}
-          <a href="https://quidax.com/" className={`inline-link${Math.floor(Math.random() * 3) + 1}`}>
-            Quidax
-          </a>{' '}
-          ,{' '}
-          <a href="https://almworks.com/" className={`inline-link${Math.floor(Math.random() * 3) + 1}`}>
-            Almworks
-          </a>{' '}
-          and{' '}
-          <a href="https://www.hidglobal.com/" className={`inline-link${Math.floor(Math.random() * 3) + 1}`}>
-            HID global
-          </a>{' '}
-          .
         </p>
         <p className="introsubtext">
           Over the years I have been lucky to learn from and lead engineers to

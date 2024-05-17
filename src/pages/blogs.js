@@ -11,7 +11,7 @@ const blogs = ({ data }) => {
   )
   return (
     <Layout>
-      <SEO title="Blog" />
+     
       <div className="layout-container">
         <div className="blog-page">
           <p className="blog-page__text">blog</p>
@@ -51,6 +51,10 @@ const blogs = ({ data }) => {
     </Layout>
   )
 }
+
+export const Head = () => (
+  <SEO title="Articles" description={'Software engineering articles written by Nero Adaware'} />
+)
 
 export const pageQuery = graphql`
   query BlogListQuery {

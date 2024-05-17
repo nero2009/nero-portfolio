@@ -20,6 +20,66 @@
   background: white !important;
 }
 
+@keyframes colorChange1 {
+  0% { fill: #B8D8D8 }
+  25% { fill: #9EC6A7; }
+  50% { fill: #81C9E2 }
+  75% { fill: #CD97A0; }
+  100% { fill: #B8D8D8; }
+}
+
+@keyframes colorChange2 {
+  0% { fill: #CD97A0;  }
+  25% { fill: #81C9E2  }
+  50% { fill:  #B8D8D8; }
+  75% { fill: #9EC6A7;}
+  100% { fill:  #B8D8D8  }
+}
+
+@keyframes colorChange3 {
+  0% { fill: #81C9E2  }
+  25% { fill: #CD97A0; }
+  50% { fill: #9EC6A7; }
+  75% { fill: #B8D8D8 }
+  100% { fill: #B8D8D8; }
+}
+
+@keyframes colorChange4 {
+  0% { fill: #B8D8D8 }
+  25% { fill:  #CD97A0; }
+  50% { fill: #B8D8D8}
+  75% { fill: #81C9E2  }
+  100% { fill: #9EC6A7; }
+}
+
+@keyframes colorChange5 {
+  0% { fill: #CD97A0 }
+  25% { fill: #9EC6A7; }
+  50% { fill: #B8D8D8  }
+  75% { fill: #81C9E2  }
+  100% { fill: #B8D8D8}
+}
+
+.rect1 {
+  animation: colorChange1 4s linear infinite;
+}
+
+.rect2 {
+  animation: colorChange2 4s linear infinite;
+}
+
+.rect3 {
+  animation: colorChange3 4s linear infinite;
+}
+
+.rect4 {
+  animation: colorChange4 4s linear infinite;
+}
+
+.rect5 {
+  animation: colorChange5 4s linear infinite;
+}
+
 
 ul {
   list-style: none;

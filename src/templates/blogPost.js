@@ -41,7 +41,7 @@ const Template = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={blog.frontmatter.title} description={blog.frontmatter.description} />
+      <SEO title={blog.frontmatter.title} description={blog.frontmatter.description} pathname={blog.frontmatter.path} />
 
       <div className="layout-container">
         <header>
