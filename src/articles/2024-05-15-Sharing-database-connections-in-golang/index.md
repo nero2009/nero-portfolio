@@ -12,7 +12,7 @@ Databases are usually initialized in the entry point of the application `main.go
 
 We can define a package that can be shared with an part of the application that needs a connection pointer.
 
-```golang
+```go
 // database.go
 package database
 
@@ -25,7 +25,7 @@ var Conn *sql.DB
 
 On start of the web server we can initialise the Conn pointer  to the database connection.
 
-```golang
+```go
 //main.go
 package main
 
@@ -57,7 +57,7 @@ func main() {
 
 Now we can reuse the database connection in repositories, models or services by just importing the database package. Instead of having to manually past it around as arguments to functions that depend on it.
 
-```golang
+```go
 //products.go
 package models
 
