@@ -1,6 +1,6 @@
 ---
 path: /fix-boringssl-grpc-unsupported-option
-date: 2025-01-11
+date: 2025-01-12
 title: Fix BoringSSL GRPC unsupported option '-G' for target arm64-apple-ios on Xcode 16
 author: Nero Adaware
 description: Fix BoringSSL GRPC unsupported option '-G' for target arm64-apple-ios on Xcode 16
