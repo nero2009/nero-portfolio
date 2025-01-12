@@ -58,7 +58,9 @@ export const Head = () => (
 
 export const pageQuery = graphql`
   query BlogListQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      filter: { frontmatter: { date: { lte: "now" } } }
+    ) {
       edges {
         node {
           id
