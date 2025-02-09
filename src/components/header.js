@@ -27,15 +27,6 @@ export default class Header extends React.Component {
     const { active } = this.state
     return (
       <div className="container">
-        {/* <Helmet>
-          <meta
-            charSet="utf-8"
-            name="personal site"
-            content="personal site"
-            description="Portfolio/blog site of finallynero"
-          />
-          <title>Nero</title>
-        </Helmet> */}
         <div className="header__border">
           <HeaderBorder className="header__border__image" />
         </div>
@@ -44,30 +35,6 @@ export default class Header extends React.Component {
             <Link to="/">
               <img src={Logo} alt="logo" className="logo__image" />
             </Link>
-            <nav className="stroke">
-              <a
-                href="#"
-                className="hide-desktop menu-container"
-                aria-label="menu icon"
-              >
-                <Menu className="menu" id="menu" onClick={this.toggleClass} />
-              </a>
-              <ul className={(active ? 'hide-mobile' : '') + ' show-desktop'}>
-                <li id="exit" className="exit-btn hide-desktop">
-                  <Close onClick={this.toggleClass} className="close-icon" />
-                </li>
-                <li>
-                  <Link activeClassName="active-nav" to="/">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link activeClassName="active-nav" to="/blogs/">
-                    Articles
-                  </Link>
-                </li>
-              </ul>
-            </nav>
           </div>
         </header>
       </div>

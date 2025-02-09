@@ -41,7 +41,11 @@ const Template = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={blog.frontmatter.title} description={blog.frontmatter.description} pathname={blog.frontmatter.path} />
+      <SEO
+        title={`${blog.frontmatter.title} | Oghenero Adaware`}
+        description={blog.frontmatter.description}
+        author="Oghenero Adaware"
+      />
 
       <div className="layout-container">
         <header>
