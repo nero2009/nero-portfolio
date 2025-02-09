@@ -15,7 +15,6 @@
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-offline": "^6.13.2",
-    "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-react-svg": "^2.0.0-beta1",
     "gatsby-plugin-robots-txt": "^1.8.0",
     "gatsby-plugin-sass": "^6.13.1",
