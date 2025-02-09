@@ -4,11 +4,11 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Finallynero Portfolio`,
-    description: `Hi, I am Nero, a Frontend developer, Open-source contributor, Technical writer, Dog lover and Humanist.`,
+    title: `Oghenero Adaware - Software Engineer`,
+    description: `Personal blog and portfolio of Oghenero Adaware. Articles about software engineering, web development, and technical insights.`,
+    author: `Oghenero Adaware`,
     siteUrl: `https://www.finallynero.dev`,
     image: `/images/logo-icon.svg`,
-    author: `@finallynero`,
     social: [
       { title: 'Github', link: 'https://github.com/nero2009', icon: 'github' },
       {
@@ -24,6 +24,19 @@ module.exports = {
     ],
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },
     {
       resolve: `gatsby-plugin-gtag`,
       options: {
@@ -88,7 +101,6 @@ module.exports = {
         siteUrl: `https://www.finallynero.dev`,
       },
     },
-    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
