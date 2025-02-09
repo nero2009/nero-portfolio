@@ -10,7 +10,6 @@
     "gatsby": "^5.13.3",
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-canonical-urls": "^5.13.1",
-    "gatsby-plugin-google-analytics": "^2.1.20",
     "gatsby-plugin-google-gtag": "^5.13.1",
     "gatsby-plugin-gtag": "^1.0.11",
     "gatsby-plugin-image": "^3.13.1",
