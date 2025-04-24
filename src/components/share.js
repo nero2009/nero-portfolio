@@ -6,7 +6,7 @@ const share = props => {
       <a
         href={`https://twitter.com/intent/tweet?text=${
           props.title
-        } by Nero Adaware(@finallynero) ${props.url}`}
+        } by Oghenero Adaware(@finallynero) ${props.url}`}
         target="_blank"
         rel="noopener noreferrer"
         className="share__container twitter"

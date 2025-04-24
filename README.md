@@ -1,4 +1,4 @@
-### Portfolio and blog for Nero Adaware
+### Portfolio and blog for Oghenero Adaware
 
 ---
 

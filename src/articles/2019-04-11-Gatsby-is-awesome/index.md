@@ -2,7 +2,7 @@
 path: /gatsby-is-awesome
 date: 2019-04-11
 title: Gatsby is awesome
-author: Nero Adaware
+author: Oghenero Adaware
 description: In this article I will be talking about some of Gatsby's awesome features, how they helped me learn React and my personal website...
 ---
 

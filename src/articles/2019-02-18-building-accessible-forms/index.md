@@ -2,7 +2,7 @@
 path: /building-accessible-forms
 date: 2019-02-18
 title: Building Accessible(A11y) Forms
-author: Nero Adaware
+author: Oghenero Adaware
 description: According to Wikipedia, It is the design of products, devices, services or environments, for people with disabilities. Accessibility in software...
 ---
 

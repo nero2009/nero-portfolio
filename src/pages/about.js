@@ -23,7 +23,7 @@ const about = ({ data }) => {
             </figure>
           </div>
           <div className="about ">
-            <p className="about__title">Hi, I am Nero.</p>
+            <p className="about__title">Hi, I am Oghenero Adaware.</p>
             <p className="about__text">
               I am a <strong>Frontend developer</strong> who specializes in{' '}
               <strong>React, Gatsby and Vue js</strong>. I quite familiar with

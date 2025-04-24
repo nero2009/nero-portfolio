@@ -2,7 +2,7 @@
 path: /dockerize-golang-web-server
 date: 2024-05-21
 title: Dockerize Golang Web Server
-author: Nero Adaware
+author: Oghenero Adaware
 description: In this article we will be looking into how to dockerize a simple Golang web server
 ---
 
@@ -94,3 +94,9 @@ This command runs the docker image we built and maps the port 8080 of the host m
 You can now access the web server by visiting `http://localhost:8080` in your browser.
 
 In our next article we will look into how we can store the docker image in a docker registry(GitHub Container Registry).
+
+While it's accurate to say that JavaScript is single-threaded in the sense that it can execute only one piece of code at a time, this doesn't fully capture its capabilities. JavaScript's single-threaded nature means that it executes code sequentially, handling one operation at a time until completion. However, depending on the environment—whether in a browser or in Node.js—JavaScript can leverage browser APIs or Node.js’s libuv library to handle asynchronous operations using separate threads.
+
+In this article, we explored how the JavaScript runtime manages asynchronous operations within a single-threaded environment. Unlike other programming languages that often use multi-threading to handle asynchronous tasks—a method that can be complex and prone to errors—JavaScript opts for a model that makes asynchronous code appear more synchronous and easier to reason about. Key mechanisms such as the event loop, task queue, callback functions, and promises enable JavaScript to manage asynchronous operations efficiently.
+
+Understanding these concepts is crucial for writing better JavaScript code and building more robust applications.
