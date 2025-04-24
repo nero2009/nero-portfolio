@@ -13,17 +13,6 @@ const blogs = ({ data }) => {
     <Layout>
      
       <div className="layout-container">
-        {/* <div className="aboutme-container">
-          <p className="aboutme-container__text">
-            My Name is Nero, A senior software engineer and mobile engineer, building scalable solutions for the pst 8 years
-          </p>
-          <p>
-            Over the years, I have scaled up mobile applications and web based applications for startups and enterprises.
-          </p>
-          <p>
-            During my career, I have worked in different industries, implementing a multiplatform crypto markets, a Media streaming solution for realtime communication between patients and doctors using WebRTC and a Highly scalable microservices for a healthtech platform.
-          </p>
-        </div> */}
         <div className="blog-page">
           <p className="blog-page__text">blogs</p>
           <HeaderBorder style={{ width: 100 }} />
@@ -45,7 +34,7 @@ const blogs = ({ data }) => {
 }
 
 export const Head = () => (
-  <SEO title="Articles" description={'Software engineering articles written by Nero Adaware'} />
+  <SEO title="Articles" description={'Software engineering articles written by Oghenero Adaware'} />
 )
 
 export const pageQuery = graphql`

@@ -2,7 +2,7 @@
 path: /generating-pdf-react-pdf
 date: 2019-07-24
 title: Generating Pdf documents in React Using React-pdf
-author: Nero Adaware
+author: Oghenero Adaware
 description: So in the tutorial, I will try to explain briefly how react-pdf works and also walk you through how to generate PDf from an array of objects
 ---
 

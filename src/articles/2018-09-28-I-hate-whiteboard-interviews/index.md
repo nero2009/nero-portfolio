@@ -2,7 +2,7 @@
 path: /I-hate-whiteboard-interviews
 date: 2018-09-28
 title: I Hate Whiteboard Interviews
-author: Nero Adaware
+author: Oghenero Adaware
 description: Experience in an interview and a dose of algorithm
 ---
 

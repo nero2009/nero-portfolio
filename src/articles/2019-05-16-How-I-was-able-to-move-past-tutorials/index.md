@@ -2,7 +2,7 @@
 path: /how-i-was-able-to-move-past-tutorials
 date: 2019-05-16
 title: How I was able to move past tutorials
-author: Nero Adaware
+author: Oghenero Adaware
 description: A lot of aspiring software developers at some point get stuck in the tutorial purgatory so in this article, I will share what helped me escape it.
 ---
 

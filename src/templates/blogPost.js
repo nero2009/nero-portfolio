@@ -81,7 +81,7 @@ const Template = ({ data }) => {
           <p>
             Personal Blog of{' '}
             <a href="https://twitter.com/finallynero" target="__blank" rel="noopener">
-              Nero Adaware
+              Oghenero Adaware
             </a>
           </p>
         </footer>

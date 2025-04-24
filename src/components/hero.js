@@ -6,7 +6,7 @@ const Hero = ({ data }) => {
     <section className="hero" style={{ textAlign: 'center' }}>
       <div className="content">
         <h1 className="introtext">Hi, I'm</h1>
-        <h2 className="introtext1">Nero Adaware</h2>
+        <h2 className="introtext1">Oghenero Adaware</h2>
         <p className="introsubtext">
           I am software engineer with experience building fullstack web and
           mobile applications using Typescript, Node, React, React Native and Golang.
