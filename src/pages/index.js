@@ -4,7 +4,6 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Blog from '../components/blog'
 import Hero from '../components/hero'
-import HeaderBorder from '../../assets/header-border.svg'
 
 const blogs = ({ data }) => {
   const sortedByDate = data.allMarkdownRemark.edges.sort(
@@ -16,7 +15,6 @@ const blogs = ({ data }) => {
       <div className="layout-container">
         <div className="blog-page">
           <p className="blog-page__text">blogs</p>
-          <HeaderBorder style={{ width: 100 }} />
           <section className="post-container">
             {sortedByDate.map(post => (
               <Blog

@@ -43,8 +43,8 @@ const Template = ({ data }) => {
     <Layout>
       <div className="layout-container">
         <header>
-          <Link to="/blogs/" className="article-back-button">
-            <img src={Back} alt="back button" className="article-back-button__text" />
+          <Link to="/" className="article-back-button">
+            <img src={Back} alt="back button" width={20} height={20}/>
             Back to articles
           </Link>
           <h1 className="article__title">{blog.frontmatter.title}</h1>
@@ -71,7 +71,6 @@ const Template = ({ data }) => {
         />
         <div className="divider" />
         <footer className="article__footer">
-          <img src={Me} alt="chiefThatsit" />
           <p>
             Personal Blog of{' '}
             <a href="https://twitter.com/finallynero" target="__blank" rel="noopener">
