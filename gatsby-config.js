@@ -4,11 +4,15 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Oghenero Adaware - Software Engineer`,
-    description: `Personal blog and portfolio of Oghenero Adaware. Articles about software engineering, web development, and technical insights.`,
+    title: `Oghenero Adaware - Software Engineer | Full Stack Developer`,
+    description: `Oghenero Adaware (finallynero) - Software Engineer specializing in TypeScript, React, Node.js, React Native, Python, and AI. Personal blog, portfolio, and technical articles about web development, mobile apps, and software engineering best practices.`,
     author: `Oghenero Adaware`,
-    siteUrl: `https://www.finallynero.dev`,
-    image: `/images/logo-icon.svg`,
+    // Keep this consistent with your real, preferred domain (and make sure the other domain 301-redirects to it).
+    siteUrl: `https://finallynero.dev`,
+    // Used for OpenGraph/Twitter cards. Must be a real, publicly reachable path.
+    // The manifest plugin generates these icons at /icons/* during build.
+    image: `/icons/icon-512x512.png`,
+    keywords: `Oghenero Adaware, finallynero, Software Engineer, Full Stack Developer, React Developer, Node.js Developer, TypeScript, React Native, Python Developer, WebRTC, AI Engineer, Frontend Developer, Backend Developer, Web Development, Mobile Development`,
     social: [
       { title: 'Github', link: 'https://github.com/nero2009', icon: 'github' },
       {
@@ -18,7 +22,7 @@ module.exports = {
       },
       {
         title: 'Linkedin',
-        link: 'https://www.linkedin.com/in/adaware-oghenero-529200ba/',
+        link: '',
         icon: 'linkedin',
       },
     ],
@@ -34,8 +38,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        policy: [{ userAgent: '*', allow: '/' }],
+        host: `https://finallynero.dev`,
+        sitemap: `https://finallynero.dev/sitemap-index.xml`,
+      },
     },
     {
       resolve: `gatsby-plugin-gtag`,
@@ -98,7 +104,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://www.finallynero.dev`,
+        siteUrl: `https://finallynero.dev`,
       },
     },
     {
@@ -110,7 +116,6 @@ module.exports = {
         background_color: '#94B2C6',
         theme_color: '#94B2C6',
         display: 'minimal-ui',
-        logo: 'src/images/logo-icon.svg',
         icon: 'src/images/logo-icon.svg',
       },
     },

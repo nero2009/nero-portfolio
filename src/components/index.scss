@@ -396,35 +396,37 @@ header {
   display: flex;
   flex-direction: column-reverse;
 }
-.post {
-  position: relative;
-  display: flex;
-  margin-bottom: 50px;
-  flex-direction: column;
-  padding-bottom: 50px;
-  border-bottom: 1px solid #efefef;
+.post-item {
+  margin-bottom: 15px;
 
-  &__title {
-    font-weight: 600;
-    margin: 0;
-    font-size: 1.5em;
+  &__link {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #00aced;
+    }
   }
 
   &__date {
-    margin: 5px 0px 15px;
-    font-size: 0.8em;
+    font-family: 'Montserrat', sans-serif;
+    color: #666;
+    font-size: 0.95em;
     font-weight: 400;
-    color: #8e8e8e;
+    white-space: nowrap;
   }
 
-  &__readMore {
-    font-size: 0.8em;
-    display: inline-block;
-    color: #20399d;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
+  &__separator {
+    margin: 0 10px;
+    color: #999;
+  }
+
+  &__title {
+    font-weight: 500;
   }
 }
 

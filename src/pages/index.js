@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Blog from '../components/blog'
+import Hero from '../components/hero'
 import HeaderBorder from '../../assets/header-border.svg'
 
 const blogs = ({ data }) => {
@@ -11,7 +12,7 @@ const blogs = ({ data }) => {
   )
   return (
     <Layout>
-     
+      <Hero />
       <div className="layout-container">
         <div className="blog-page">
           <p className="blog-page__text">blogs</p>
@@ -22,7 +23,6 @@ const blogs = ({ data }) => {
                 title={post.node.frontmatter.title}
                 date={post.node.frontmatter.date}
                 path={post.node.frontmatter.path}
-                description={post.node.frontmatter.description}
                 key={post.node.id}
               />
             ))}
@@ -33,8 +33,12 @@ const blogs = ({ data }) => {
   )
 }
 
-export const Head = () => (
-  <SEO title="Articles" description={'Software engineering articles written by Oghenero Adaware'} />
+export const Head = ({ location }) => (
+  <SEO
+    title="Oghenero Adaware - Software Engineer | Full Stack Developer"
+    description="Oghenero Adaware (finallynero) is a Software Engineer with expertise in TypeScript, React, Node.js, React Native, Python, and AI. Building fullstack web and mobile applications. Connect with Oghenero Adaware for software engineering opportunities."
+    pathname={location?.pathname}
+  />
 )
 
 export const pageQuery = graphql`
@@ -59,3 +63,4 @@ export const pageQuery = graphql`
 `
 
 export default blogs
+

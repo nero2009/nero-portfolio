@@ -33,7 +33,7 @@ export default class Header extends React.Component {
         <header>
           <div className="navbar">
             <Link to="/">
-              <img src={Logo} alt="logo" className="logo__image" />
+              <img src={Logo} alt="Oghenero Adaware Logo" className="logo__image" />
             </Link>
           </div>
         </header>

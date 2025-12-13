@@ -8,7 +8,6 @@ import PortfolioItem from '../components/portfolioItem'
 const work = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Work" />
       <div className="layout-container">
         <div className="about-page">
           <p className="about-page__text">portfolio</p>
@@ -29,7 +28,7 @@ const work = ({ data }) => {
               tech="Gatsby"
               link={{
                 github: 'https://github.com/nero2009/nero-portfolio',
-                live: 'http://finallynero.dev/',
+                live: 'https://finallynero.dev/',
               }}
             />
             <PortfolioItem
@@ -79,6 +78,14 @@ const work = ({ data }) => {
     </Layout>
   )
 }
+
+export const Head = ({ location }) => (
+  <SEO
+    title="Work | Oghenero Adaware"
+    description="Selected work and projects by Oghenero Adaware."
+    pathname={location?.pathname}
+  />
+)
 
 export const portfolioQuery = graphql`
   query PorfolioImageQuery {

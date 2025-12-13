@@ -41,12 +41,6 @@ const Template = ({ data }) => {
 
   return (
     <Layout>
-      <SEO
-        title={`${blog.frontmatter.title} | Oghenero Adaware`}
-        description={blog.frontmatter.description}
-        author="Oghenero Adaware"
-      />
-
       <div className="layout-container">
         <header>
           <Link to="/blogs/" className="article-back-button">
@@ -92,10 +86,59 @@ const Template = ({ data }) => {
 
 export default Template
 
+export const Head = ({ data, location }) => {
+  const blog = data?.markdownRemark
+  const siteUrl = data?.site?.siteMetadata?.siteUrl || 'https://finallynero.dev'
+  const articleUrl = `${siteUrl}${blog?.frontmatter?.path || location?.pathname || ''}`
+  
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: blog?.frontmatter?.title,
+    description: blog?.frontmatter?.description,
+    author: {
+      '@type': 'Person',
+      name: 'Oghenero Adaware',
+      url: siteUrl,
+      sameAs: [
+        'https://www.linkedin.com/in/adaware-oghenero-529200ba/',
+        'https://github.com/nero2009',
+        'https://twitter.com/finallynero',
+      ],
+    },
+    datePublished: blog?.frontmatter?.date,
+    dateModified: blog?.frontmatter?.date,
+    publisher: {
+      '@type': 'Person',
+      name: 'Oghenero Adaware',
+      url: siteUrl,
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': articleUrl,
+    },
+    url: articleUrl,
+    inLanguage: 'en',
+  }
+
+  return (
+    <>
+      <SEO
+        title={`${blog?.frontmatter?.title || 'Article'} | Oghenero Adaware`}
+        description={blog?.frontmatter?.description}
+        author="Oghenero Adaware"
+        pathname={location?.pathname}
+      />
+      <script type="application/ld+json">
+        {JSON.stringify(articleSchema)}
+      </script>
+    </>
+  )
+}
 
 export const articleQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query BlogPostByPath($slug: String!) {
+    markdownRemark(frontmatter: { path: { eq: $slug } }) {
       html
       frontmatter {
         path
