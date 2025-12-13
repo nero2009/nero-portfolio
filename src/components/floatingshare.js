@@ -31,16 +31,6 @@ const floatingshare = props => {
           title="Share on Linkedin"
         />
       </a>
-      <CopyToClipboard text={props.url}>
-        <button className="share__container ">
-          <img
-            src="https://icongr.am/fontawesome/clone.svg?color=ffffff"
-            className="share__icon"
-            alt="copy to clipboard"
-            title="Copy post Url to clipboard"
-          />
-        </button>
-      </CopyToClipboard>
     </aside>
   )
 }

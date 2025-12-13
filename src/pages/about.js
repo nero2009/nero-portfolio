@@ -8,7 +8,6 @@ import SEO from '../components/seo'
 const about = ({ data }) => {
   return (
     <Layout>
-      <SEO title="About" />
       <div className="layout-container">
         <div className="about-page">
           <p className="about-page__text">
@@ -96,6 +95,14 @@ const about = ({ data }) => {
     </Layout>
   )
 }
+
+export const Head = ({ location }) => (
+  <SEO
+    title="About Oghenero Adaware | Software Engineer Profile"
+    description="Learn about Oghenero Adaware (finallynero), a Software Engineer specializing in React, Node.js, TypeScript, React Native, and Python. Background, experience, interests, and ways to connect with Oghenero Adaware."
+    pathname={location?.pathname}
+  />
+)
 
 export const aboutQuery = graphql`
   query AboutImageQuery {

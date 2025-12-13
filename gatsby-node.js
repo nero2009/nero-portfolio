@@ -40,7 +40,8 @@ exports.createPages = ({ actions, graphql }) => {
         path: node.frontmatter.path,
         component: postTemplate,
         context: {
-          path: node.frontmatter.path,
+          // Avoid reserved "path" in Gatsby page context (it already exists on the page object).
+          slug: node.frontmatter.path,
         }
       })
     })
