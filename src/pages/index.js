@@ -1,14 +1,30 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 import Blog from '../components/blog'
 import Hero from '../components/hero'
 
+const _ = require('lodash')
+
 const blogs = ({ data }) => {
   const sortedByDate = data.allMarkdownRemark.edges.sort(
     (a, b) => new Date(a.node.frontmatter.date) - new Date(b.node.frontmatter.date)
   )
+
+  // Collect all unique tags with their counts
+  const tagCounts = {}
+  data.allMarkdownRemark.edges.forEach(({ node }) => {
+    if (node.frontmatter.tags) {
+      node.frontmatter.tags.forEach(tag => {
+        tagCounts[tag] = (tagCounts[tag] || 0) + 1
+      })
+    }
+  })
+
+  // Sort tags alphabetically
+  const sortedTags = Object.keys(tagCounts).sort()
+
   return (
     <Layout>
       <Hero />
@@ -21,11 +37,29 @@ const blogs = ({ data }) => {
                 title={post.node.frontmatter.title}
                 date={post.node.frontmatter.date}
                 path={post.node.frontmatter.path}
-                tags={post.node.frontmatter.tags}
                 key={post.node.id}
               />
             ))}
           </section>
+
+          {/* All Tags Section */}
+          {sortedTags.length > 0 && (
+            <div className="all-tags-section">
+              <h3 className="all-tags-title">Browse by Topic</h3>
+              <div className="all-tags-container">
+                {sortedTags.map(tag => (
+                  <Link
+                    key={tag}
+                    to={`/tags/${_.kebabCase(tag)}/`}
+                    className="tag-item"
+                  >
+                    <span className="tag-item__name">{tag}</span>
+                    <span className="tag-item__count">({tagCounts[tag]})</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </Layout>
