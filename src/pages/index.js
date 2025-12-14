@@ -21,6 +21,7 @@ const blogs = ({ data }) => {
                 title={post.node.frontmatter.title}
                 date={post.node.frontmatter.date}
                 path={post.node.frontmatter.path}
+                tags={post.node.frontmatter.tags}
                 key={post.node.id}
               />
             ))}
@@ -53,6 +54,7 @@ export const pageQuery = graphql`
             author
             date
             description
+            tags
           }
         }
       }

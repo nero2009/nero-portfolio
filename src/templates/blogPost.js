@@ -7,6 +7,8 @@ import SEO from '../components/seo'
 import FloatingShare from '../components/floatingshare'
 import Me from '../images/chiefThatsit.png'
 
+const _ = require('lodash')
+
 const Template = ({ data }) => {
   const [showShare, setShowShare] = useState(false);
 
@@ -63,6 +65,20 @@ const Template = ({ data }) => {
             />
           </div>
         </div>
+        {blog.frontmatter.tags && blog.frontmatter.tags.length > 0 && (
+          <div className="article__tags">
+            <span className="article__tags-label">Tags:</span>
+            {blog.frontmatter.tags.map(tag => (
+              <Link
+                key={tag}
+                to={`/tags/${_.kebabCase(tag)}/`}
+                className="article__tag"
+              >
+                {tag}
+              </Link>
+            ))}
+          </div>
+        )}
         <article className="article" dangerouslySetInnerHTML={{ __html: blog.html }} />
         <FloatingShare
           show={showShare}
@@ -145,6 +161,7 @@ export const articleQuery = graphql`
         author
         date
         description
+        tags
       }
     }
     site {
