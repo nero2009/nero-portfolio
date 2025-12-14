@@ -4,6 +4,7 @@ date: 2024-05-21
 title: Dockerize Golang Web Server
 author: Oghenero Adaware
 description: In this article we will be looking into how to dockerize a simple Golang web server
+tags: ["Golang", "Docker", "DevOps", "Tutorial", "Deployment"]
 ---
 
 In this article we will be looking into how to dockerize a simple Golang web server. We will create a simple web server that returns a JSON response which we will then dockerize, generate docker image and run the container.

@@ -4,6 +4,7 @@ date: 2024-05-15
 title: Sharing Database connections in golang 
 author: Oghenero Adaware
 description: Sometimes we need to share database connections across our application, in this article we will be looking at how to share database connections in golang.
+tags: ["Golang", "Database", "Backend", "Architecture"]
 ---
 
 A common scenario when building web servers where you need to share connection to your database across your application. 

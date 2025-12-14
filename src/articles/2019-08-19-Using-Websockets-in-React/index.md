@@ -4,6 +4,7 @@ date: 2019-08-19
 title: Using WebSockets in React 
 author: Oghenero Adaware
 description: Recently I had to consume a WebSocket API in a React application I was working on, So in this article, I will briefly explain how to use it in a React Application.
+tags: ["React", "WebSocket", "Real-time", "Tutorial"]
 ---
 
 <img src="./websocket.png" width="100%" />

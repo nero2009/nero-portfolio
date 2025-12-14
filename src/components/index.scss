@@ -310,27 +310,59 @@ a {
   margin: 0;
 }
 
-/* Tags in post items (blog list) */
-.post-item__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 8px;
+/* All Tags Section at bottom of blog list */
+.all-tags-section {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 2px solid #eaeaea;
 }
 
-.post-item__tag {
-  display: inline-block;
-  padding: 4px 12px;
+.all-tags-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.all-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tag-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
   background-color: #f5f5f5;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  color: #666;
+  border: 2px solid #e0e0e0;
+  border-radius: 20px;
   text-decoration: none;
-  transition: all 0.2s ease;
+  color: #111;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: #94B2C6;
+    border-color: #94B2C6;
     color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(148, 178, 198, 0.3);
+  }
+
+  &__name {
+    font-size: 0.95rem;
+  }
+
+  &__count {
+    font-size: 0.85rem;
+    opacity: 0.7;
   }
 }
 
