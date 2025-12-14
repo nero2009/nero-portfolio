@@ -4,6 +4,7 @@ date: 2019-01-17
 title: What Materials Would I Use If I Started Learning Javascript Again
 author: Oghenero Adaware
 description: In this era of information boom the assumption is that you can pick up any skill(technical or creative) because there are a lot of materials available but It is quite the opposite.
+tags: ["JavaScript", "Learning", "Beginner", "Resources"]
 ---
 
 In this era of information boom the assumption is that you can pick up any skill(technical or creative) because there are a lot of materials available but It is quite the opposite.

@@ -1,0 +1,214 @@
+# Nero Portfolio - Cursor AI Rules
+
+## Project Overview
+Personal portfolio and technical blog built with Gatsby 5 and React 18. Static site generator outputting to https://finallynero.dev
+
+## Tech Stack
+- **Framework:** Gatsby 5.13.3
+- **UI Library:** React 18.2.0
+- **Styling:** SASS/SCSS (component styles in index.scss)
+- **Query Language:** GraphQL
+- **Deployment:** Static site (JAMstack architecture)
+
+## Project Structure
+```
+src/
+├── articles/         # Markdown blog posts with frontmatter
+├── components/       # React components (mix of functional & class)
+├── pages/           # Gatsby pages (index, about, work, 404)
+├── templates/       # Blog post template
+├── hooks/           # Custom React hooks (useSiteMetadata)
+└── images/          # Static images
+```
+
+## Component Patterns
+
+### Functional Components (Preferred)
+- Use functional components with hooks
+- Export Head component for SEO (Gatsby 5 pattern)
+- Use GraphQL queries with useStaticQuery or page queries
+
+### Current Class Components (Legacy)
+- `Header.js` - Should be refactored to functional when editing
+
+### Example Pattern:
+```javascript
+const MyComponent = ({ data }) => {
+  // Component logic
+  return <div>...</div>
+}
+
+export const Head = ({ location }) => (
+  <SEO title="..." description="..." pathname={location?.pathname} />
+)
+
+export const pageQuery = graphql`...`
+export default MyComponent
+```
+
+## Blog Post Frontmatter Schema
+```yaml
+---
+path: /article-slug
+date: YYYY-MM-DD
+title: Article Title
+author: Oghenero Adaware
+description: Brief meta description for SEO
+tags: ["Tag1", "Tag2", "Tag3"]  # Optional: 2-5 tags recommended
+---
+```
+
+## Coding Conventions
+
+### Imports
+- React components: Capitalize first letter
+- Keep imports organized: React, Gatsby, components, assets, styles
+- Use relative imports for local components
+
+### Styling
+- Main stylesheet: `src/components/index.scss`
+- Use BEM-like class naming: `.component__element--modifier`
+- Mobile-first responsive design
+
+### Links & Navigation
+- Internal: Use Gatsby's `<Link>` component
+- External: Use `<a>` with `target="_blank"` and `rel="noopener noreferrer"`
+- Always include alt text for images
+- Use aria-labels for icon-only links
+
+### SEO
+- Always export Head component on pages
+- Use SEO component with title, description, pathname
+- Include structured data for articles (Schema.org)
+- Maintain canonical URLs
+
+## GraphQL Patterns
+
+### Site Metadata
+```javascript
+import { useSiteMetadata } from '../hooks/useSiteMetadata'
+const { title, siteUrl } = useSiteMetadata()
+```
+
+### Page Queries
+- Use page queries for dynamic routes (templates)
+- Use StaticQuery/useStaticQuery for components
+- Query only needed fields
+
+## Known Issues & Tech Debt
+
+### IMPORTANT: DO NOT USE
+- ❌ `gatsby-image` (deprecated) - Use `gatsby-plugin-image` instead
+- ❌ Class components (except Header.js until refactored)
+- ❌ Hard-coded URLs - Use siteMetadata from config
+
+### Current Deprecations
+1. `gatsby-image` → Migrate to `gatsby-plugin-image`
+2. Some Open Graph tags could use image optimization
+3. LinkedIn URL in config is empty (needs update)
+
+### Target Attribute Bug
+- Some files use `__blank` instead of `_blank` - fix when encountered
+
+## File Naming
+- Components: camelCase.js (e.g., `blogPost.js`)
+- Pages: camelCase.js (e.g., `about.js`)
+- Hooks: camelCase.jsx (e.g., `useSiteMetadata.jsx`)
+- Articles: YYYY-MM-DD-title-with-dashes/index.md
+
+## Environment Variables
+- `ANALYTICS_ID` - Google Analytics tracking ID
+- Loaded from `.env.${NODE_ENV}`
+
+## Build Commands
+```bash
+npm run develop  # Development server (localhost:8000)
+npm run build    # Production build
+npm start        # Alias for develop
+```
+
+## Dependencies to Keep Updated
+- Gatsby core and plugins
+- React and React DOM
+- Prismjs (syntax highlighting)
+- SASS
+
+## Accessibility Requirements
+- Semantic HTML5 elements
+- Alt text for all images
+- ARIA labels for icon links
+- Keyboard navigation support
+- High contrast text
+
+## When Creating New Components
+1. Use functional components with hooks
+2. Add PropTypes validation
+3. Export Head component if it's a page
+4. Use consistent styling patterns from index.scss
+5. Ensure mobile responsiveness
+6. Include accessibility attributes
+
+## When Adding New Blog Posts
+1. Create folder: `src/articles/YYYY-MM-DD-title/`
+2. Add `index.md` with proper frontmatter
+3. Add 2-5 relevant tags (e.g., `tags: ["React", "JavaScript"]`)
+4. Images go in same folder
+5. Use proper markdown syntax
+6. Include description for SEO
+7. Will auto-generate route and tag pages via gatsby-node.js
+
+## GraphQL Schema Notes
+- `allMarkdownRemark` - All blog posts
+- `markdownRemark` - Single blog post
+- Filter by `frontmatter.date: { lte: "now" }` to exclude future posts
+
+## Performance Considerations
+- Images optimized via gatsby-plugin-sharp
+- Static generation for fast loads
+- Service worker for offline support
+- Code splitting automatic
+
+## Testing
+- No test suite currently (add Jest + RTL when implementing)
+
+## Style Guide
+- Modern, minimalist design
+- Colors: White background, dark text (#111, #333), accent #94B2C6
+- Fonts: System font stack + Arimo from Google Fonts
+- Clean, readable typography
+- Consistent spacing using standard CSS units
+
+## Structured Data (Schema.org)
+- Person schema with social links
+- WebSite schema with search potential action
+- BlogPosting schema for articles
+- Always maintain structured data when editing SEO
+
+## Social Sharing
+- Twitter intent URLs
+- LinkedIn share URLs
+- Floating share bar on scroll (blogPost template)
+- Static share buttons (all posts)
+
+## When Refactoring
+1. Maintain existing functionality
+2. Update imports if changing component type
+3. Test SEO tags after changes
+4. Ensure GraphQL queries still work
+5. Check mobile responsiveness
+6. Verify all links work
+
+## Git Workflow
+- Main branch for production
+- Test builds before committing
+- Check for linter errors
+- Gatsby build must succeed
+
+## Author Information
+- Name: Oghenero Adaware
+- Handle: finallynero
+- Email: nero2009@rocketmail.com
+- Twitter: @finallynero
+- GitHub: nero2009
+- Site: https://finallynero.dev
+

@@ -4,6 +4,7 @@ date: 2019-02-18
 title: Building Accessible(A11y) Forms
 author: Oghenero Adaware
 description: According to Wikipedia, It is the design of products, devices, services or environments, for people with disabilities. Accessibility in software...
+tags: ["Accessibility", "HTML", "Forms", "Web Development", "A11y"]
 ---
 
 ### What is Accessibility(a11y)?

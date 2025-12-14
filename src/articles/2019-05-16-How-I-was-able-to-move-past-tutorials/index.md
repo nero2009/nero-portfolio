@@ -4,6 +4,7 @@ date: 2019-05-16
 title: How I was able to move past tutorials
 author: Oghenero Adaware
 description: A lot of aspiring software developers at some point get stuck in the tutorial purgatory so in this article, I will share what helped me escape it.
+tags: ["Career", "Learning", "Beginner", "Self-Development"]
 ---
 
 <img src="https://thepracticaldev.s3.amazonaws.com/i/yhi65442t81duytcodyb.png" alt ="headerimage" width='100%'>

@@ -4,6 +4,7 @@ date: 2025-01-12
 title: Fix BoringSSL GRPC unsupported option '-G' for target arm64-apple-ios on Xcode 16
 author: Oghenero Adaware
 description: Fix BoringSSL GRPC unsupported option '-G' for target arm64-apple-ios on Xcode 16
+tags: ["React Native", "iOS", "GRPC", "Firebase", "Xcode"]
 ---
 
 

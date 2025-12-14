@@ -4,6 +4,7 @@ date: 2019-09-27
 title: Hooks Introduced in React-Router v5.1 
 author: Oghenero Adaware
 description: I am always excited when there is a new release of any of my favourite libraries/frameworks/languages, At about 6 pm yesterday while scrolling through twitter I saw that a new version of react-router was released so I went to look it up and the react-router team added some really nice new API's and functionality.
+tags: ["React", "React Router", "Hooks", "Tutorial"]
 ---
 
 <img src="./React-Router.jpg" width="100%" />

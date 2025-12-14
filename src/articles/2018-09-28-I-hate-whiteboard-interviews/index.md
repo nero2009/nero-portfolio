@@ -4,6 +4,7 @@ date: 2018-09-28
 title: I Hate Whiteboard Interviews
 author: Oghenero Adaware
 description: Experience in an interview and a dose of algorithm
+tags: ["Career", "Interview", "JavaScript", "Algorithms"]
 ---
 
 I know the post’s title suggests a negative connotation but maybe after reading my story in this article you should learn something, but it’s equally okay if you pick nothing.
