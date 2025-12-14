@@ -4,6 +4,7 @@ date: 2019-04-11
 title: Gatsby is awesome
 author: Oghenero Adaware
 description: In this article I will be talking about some of Gatsby's awesome features, how they helped me learn React and my personal website...
+tags: ["Gatsby", "React", "GraphQL", "Static Sites", "JAMstack"]
 ---
 
 <!-- ![Gatsby](./gatsby.jpeg) -->

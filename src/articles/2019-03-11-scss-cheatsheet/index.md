@@ -4,6 +4,7 @@ date: 2019-03-11
 title: Scss Cheatsheet
 author: Oghenero Adaware
 description: SCSS simply means Sassy CSS. Sassy CSS is a CSS preprocessor that gives you access to use features that are not available in Vanilla(normal) CSS.
+tags: ["SCSS", "CSS", "Styling", "Frontend", "Tutorial"]
 ---
 
 ### What is SCSS

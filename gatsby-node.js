@@ -4,14 +4,14 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
-
 const path = require('path')
+const _ = require('lodash')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   const postTemplate = path.resolve('./src/templates/blogPost.js')
+  const tagTemplate = path.resolve('./src/templates/tag.js')
 
   return graphql(`
     {
@@ -25,6 +25,7 @@ exports.createPages = ({ actions, graphql }) => {
               title
               date
               author
+              tags
             }
           }
         }
@@ -35,7 +36,10 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(res.errors)
     }
 
-    res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    const posts = res.data.allMarkdownRemark.edges
+
+    // Create blog post pages
+    posts.forEach(({ node }) => {
       createPage({
         path: node.frontmatter.path,
         component: postTemplate,
@@ -43,6 +47,28 @@ exports.createPages = ({ actions, graphql }) => {
           // Avoid reserved "path" in Gatsby page context (it already exists on the page object).
           slug: node.frontmatter.path,
         }
+      })
+    })
+
+    // Create tag pages
+    let tags = []
+    posts.forEach(({ node }) => {
+      if (node.frontmatter.tags) {
+        tags = tags.concat(node.frontmatter.tags)
+      }
+    })
+
+    // Eliminate duplicate tags
+    tags = _.uniq(tags)
+
+    // Create page for each tag
+    tags.forEach(tag => {
+      createPage({
+        path: `/tags/${_.kebabCase(tag)}/`,
+        component: tagTemplate,
+        context: {
+          tag,
+        },
       })
     })
   })

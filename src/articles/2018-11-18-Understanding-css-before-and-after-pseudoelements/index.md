@@ -3,7 +3,8 @@ path: /understanding-css-pseudo-elements
 date: 2018-11-14
 title: Understanding CSS before and after pseudo-elements
 author: Oghenero Adaware
-description: When I started learning front-end development I really hated CSS and design(I still hate design) but my CSS is a little better. One concept I didn’t understand was CSS pseudo-elements ....
+description: When I started learning front-end development I really hated CSS and design(I still hate design) but my CSS is a little better. One concept I didn't understand was CSS pseudo-elements ....
+tags: ["CSS", "Frontend", "Web Development", "Styling"]
 ---
 
 When I started learning front-end development I really hated CSS and design(I still hate design) but my CSS is a little better. One concept I didn’t understand was CSS pseudo-elements `::after` and `::before`.
