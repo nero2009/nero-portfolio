@@ -9,7 +9,7 @@ const _ = require('lodash')
 
 const blogs = ({ data }) => {
   const sortedByDate = data.allMarkdownRemark.edges.sort(
-    (a, b) => new Date(a.node.frontmatter.date) - new Date(b.node.frontmatter.date)
+    (a, b) => new Date(b.node.frontmatter.date) - new Date(a.node.frontmatter.date)
   )
 
   // Collect all unique tags with their counts
