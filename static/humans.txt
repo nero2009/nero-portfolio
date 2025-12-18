@@ -3,7 +3,6 @@ Developer: Oghenero Adaware
 Site: https://finallynero.dev
 Twitter: @finallynero
 GitHub: @nero2009
-LinkedIn: https://www.linkedin.com/in/adaware-oghenero-529200ba/
 Location: Nigeria
 
 /* SITE */
@@ -15,4 +14,5 @@ Language: English
 /* THANKS */
 Built with: Gatsby.js
 Hosted: Netlify/Vercel
+
 
