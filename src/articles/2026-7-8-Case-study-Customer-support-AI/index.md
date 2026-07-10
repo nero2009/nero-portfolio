@@ -21,7 +21,6 @@ PiggyVest is a Nigerian fintech company that provides a platform for users to sa
 ## Problem
 
 I will be using real, messy data instead of a synthetic dataset: manually screenshotted PiggyVest Twitter replies, OCR'd with Gemini. We will also be using publicly available FAQs, blogs and other relevant information to provide context for the AI agent.
-
 This is purely for educational purposes (I hope this is not a violation of their terms of service but this is for personal use and not for commercial use).
 
 ## Why this project?
@@ -44,6 +43,5 @@ This project is a good and common use case for AI agents. A support triage agent
 ## Final Goal
 
 The aim of this project is personal development and learning. I want to know what it takes to build a full functional AI agent. 
-
 And of course see how my skills in software development can translate into AI product development.
 
