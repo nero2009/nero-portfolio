@@ -1,11 +1,10 @@
-import React, { Component, useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import { graphql, Link } from 'gatsby'
 import Share from '../components/share'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import FloatingShare from '../components/floatingshare'
-
-const _ = require('lodash')
+import kebabCase from '../utils/kebabCase'
 
 const BackArrow = () => {
   return (
@@ -107,7 +106,7 @@ const Template = ({ data }) => {
             {blog.frontmatter.tags.map(tag => (
               <Link
                 key={tag}
-                to={`/tags/${_.kebabCase(tag)}/`}
+                to={`/tags/${kebabCase(tag)}/`}
                 className="article__tag"
               >
                 {tag}
@@ -129,7 +128,7 @@ const Template = ({ data }) => {
           <p>
             Personal Blog of{' '}
             <a
-              href="https://twitter.com/finallynero"
+              href="https://www.linkedin.com/in/adaware-oghenero/"
               target="__blank"
               rel="noopener"
             >
@@ -183,7 +182,7 @@ export const Head = ({ data, location }) => {
 
   return (
     <>
-      <SEO
+      <Seo
         title={`${blog?.frontmatter?.title || 'Article'} | Oghenero Adaware`}
         description={blog?.frontmatter?.description}
         author="Oghenero Adaware"

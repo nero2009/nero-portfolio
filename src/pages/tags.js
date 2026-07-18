@@ -1,10 +1,9 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import HeaderBorder from '../../assets/header-border.svg'
-
-const _ = require('lodash')
+import kebabCase from '../utils/kebabCase'
 
 const TagsPage = ({ data }) => {
   const allTags = data.allMarkdownRemark.group
@@ -21,7 +20,7 @@ const TagsPage = ({ data }) => {
             {allTags.map(tag => (
               <Link
                 key={tag.fieldValue}
-                to={`/tags/${_.kebabCase(tag.fieldValue)}/`}
+                to={`/tags/${kebabCase(tag.fieldValue)}/`}
                 className="tag-bubble"
               >
                 <span className="tag-name">{tag.fieldValue}</span>
@@ -36,7 +35,7 @@ const TagsPage = ({ data }) => {
 }
 
 export const Head = ({ location }) => (
-  <SEO
+  <Seo
     title="All Tags | Oghenero Adaware"
     description="Browse all tags and topics covered on Oghenero Adaware's technical blog. Explore articles about React, Node.js, Golang, TypeScript, and more."
     pathname={location?.pathname}
