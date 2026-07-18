@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import Blog from '../components/blog'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
 const TagTemplate = ({ data, pageContext }) => {
   const { tag } = pageContext
@@ -40,7 +40,7 @@ const TagTemplate = ({ data, pageContext }) => {
 export const Head = ({ pageContext, location }) => {
   const { tag } = pageContext
   return (
-    <SEO
+    <Seo
       title={`Posts tagged with "${tag}" | Oghenero Adaware`}
       description={`Browse all articles tagged with ${tag} by Oghenero Adaware (finallynero). Technical blog posts about ${tag} and software engineering.`}
       pathname={location?.pathname}

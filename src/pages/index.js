@@ -45,7 +45,6 @@ const blogs = ({ data }) => {
           {/* All Tags Section */}
           {sortedTags.length > 0 && (
             <div className="all-tags-section">
-              <h3 className="all-tags-title">Browse by Topic</h3>
               <div className="all-tags-container">
                 {sortedTags.map(tag => (
                   <Link
