@@ -11,14 +11,17 @@ Is Javascript single-threaded? Yes, Javascript is single-threaded. But how does 
 
 #### Table of contents
 - [Introduction](#introduction)
-- [Javascript is single-threaded](#javascript-is-single-threaded)
-- [Asynchronous and synchronous operations in Javascript](#asynchronous-operations-in-javascript)
-  - [Synchronous operations](#synchronous-operations)
-  - [Asynchronous operations](#asynchronous-operations)
+- [Asynchronous and synchronous operations in Javascript](#asynchronous-and-synchronous-operations-in-javascript)
+- [Simplified Javascript runtime](#simplified-javascript-runtime)
+  - [Call Stack](#call-stack)
+  - [Task queue](#task-queue)
   - [Event loop](#event-loop)
-  - [Callback functions](#callback-functions)
-  - [Examples of Settimeout and callback functions](#examples-of-settimeout-and-callback-functions)
 - [Conclusion](#conclusion)
+
+
+<br />
+<br />
+
 
 ### Introduction
 
@@ -216,7 +219,6 @@ I know we have claimed throughout this article that javascript is single threade
 But javascript can offload expensive operations to another thread and then handle the result of the operation when it is done.
 
 In this article we explored how javascript runtime is able to handle asynchronous operations in a single-threaded environment. Other programming languages usually handle async operations by multi-threading but this can be complex and error-prone if not implemented correctly. Javascript chose to handle async operations in a way that looks synchronous and is easy to reason about. The event loop, task queue, callback functions and promises are some of the mechanisms that javascript uses to handle async operations. Understanding these concepts will help you write better javascript code and build better applications.
-
 
 
 
