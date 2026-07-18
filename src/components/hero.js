@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-const Hero = ({ data }) => {
+const Hero = () => {
   return (
     <section className="hero" itemScope itemType="https://schema.org/Person">
       <div className="content">
@@ -12,18 +12,9 @@ const Hero = ({ data }) => {
         <meta itemProp="url" content="https://finallynero.dev" />
         
         <p className="introsubtext" itemProp="description">
-          Software Engineer. Building fullstack web and
-          mobile applications with <span itemProp="knowsAbout">TypeScript</span>, <span itemProp="knowsAbout">Node</span>, <span itemProp="knowsAbout">React</span>, and <span itemProp="knowsAbout">React Native</span>. 
-          Currently shipping AI media applications.
+          Software Engineer over 9 years experience building fullstack web,
+          mobile applications and AI applications.
         </p>
-      
-        <p className="introsubtext">
-          I learn from and lead engineers to deliver quality products in distributed teams.
-        </p>
-        <p className="introsubtext">
-          Outside work: Random tech videos, automation daydreams, football, podcasts.
-        </p>
-       
         <p className="introsubtext">
           <a href="mailto:nero2009@rocketmail.com" className="simple-link" itemProp="email">nero2009@rocketmail.com</a>
         </p>
