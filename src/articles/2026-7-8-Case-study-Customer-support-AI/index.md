@@ -30,15 +30,15 @@ This project is a good and common use case for AI agents. A support triage agent
 ## What's ahead
 
 - Building the support triage agent platform
-  - Backend built with Node.js and PostgreSQL
-  - Frontend built with React (Vite)
-  - Dockerized
 - Binary check evaluation
 - LLM-as-judge evaluation
 - RAG (Retrieval-Augmented Generation)
 - Tool calling
 - Function calling
 - Agent response generation/auto escalation
+
+<br />
+
 
 ## Final Goal
 
