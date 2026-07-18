@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import HeaderBorder from '../../assets/header-border.svg'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import PortfolioItem from '../components/portfolioItem'
 
 const work = ({ data }) => {
@@ -80,7 +80,7 @@ const work = ({ data }) => {
 }
 
 export const Head = ({ location }) => (
-  <SEO
+  <Seo
     title="Work | Oghenero Adaware"
     description="Selected work and projects by Oghenero Adaware."
     pathname={location?.pathname}

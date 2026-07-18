@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
 const NotFoundPage = () => (
   <Layout>
@@ -11,7 +11,7 @@ const NotFoundPage = () => (
 )
 
 export const Head = ({ location }) => (
-  <SEO title="404: Not found | Oghenero Adaware" pathname={location?.pathname} />
+  <Seo title="404: Not found | Oghenero Adaware" pathname={location?.pathname} />
 )
 
 export default NotFoundPage

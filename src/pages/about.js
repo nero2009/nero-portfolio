@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import HeaderBorder from '../../assets/header-border.svg'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
 const about = ({ data }) => {
   return (
@@ -97,7 +97,7 @@ const about = ({ data }) => {
 }
 
 export const Head = ({ location }) => (
-  <SEO
+  <Seo
     title="About Oghenero Adaware | Software Engineer Profile"
     description="Learn about Oghenero Adaware (finallynero), a Software Engineer specializing in React, Node.js, TypeScript, React Native, and Python. Background, experience, interests, and ways to connect with Oghenero Adaware."
     pathname={location?.pathname}

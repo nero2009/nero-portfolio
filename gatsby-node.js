@@ -5,7 +5,7 @@
  */
 
 const path = require('path')
-const _ = require('lodash')
+const kebabCase = require('./src/utils/kebabCase')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -59,12 +59,12 @@ exports.createPages = ({ actions, graphql }) => {
     })
 
     // Eliminate duplicate tags
-    tags = _.uniq(tags)
+    tags = [...new Set(tags)]
 
     // Create page for each tag
     tags.forEach(tag => {
       createPage({
-        path: `/tags/${_.kebabCase(tag)}/`,
+        path: `/tags/${kebabCase(tag)}/`,
         component: tagTemplate,
         context: {
           tag,

@@ -1,11 +1,10 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import Layout from '../components/layout'
 import Blog from '../components/blog'
 import Hero from '../components/hero'
-
-const _ = require('lodash')
+import kebabCase from '../utils/kebabCase'
 
 const blogs = ({ data }) => {
   const sortedByDate = data.allMarkdownRemark.edges.sort(
@@ -49,7 +48,7 @@ const blogs = ({ data }) => {
                 {sortedTags.map(tag => (
                   <Link
                     key={tag}
-                    to={`/tags/${_.kebabCase(tag)}/`}
+                    to={`/tags/${kebabCase(tag)}/`}
                     className="tag-item"
                   >
                     <span className="tag-item__name">{tag}</span>
@@ -66,7 +65,7 @@ const blogs = ({ data }) => {
 }
 
 export const Head = ({ location }) => (
-  <SEO
+  <Seo
     title="Oghenero Adaware - Software Engineer | Full Stack Developer"
     description="Oghenero Adaware (finallynero) is a Software Engineer with expertise in TypeScript, React, Node.js, React Native, Python, and AI. Building fullstack web and mobile applications. Connect with Oghenero Adaware for software engineering opportunities."
     pathname={location?.pathname}
