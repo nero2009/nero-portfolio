@@ -12,7 +12,7 @@ const Hero = () => {
         <meta itemProp="url" content="https://finallynero.dev" />
         
         <p className="introsubtext" itemProp="description">
-          Software Engineer over 9 years experience building fullstack web,
+          Software Engineer with over 9 years experience building fullstack web,
           mobile applications and AI applications.
         </p>
         <p className="introsubtext">
