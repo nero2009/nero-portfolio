@@ -34,7 +34,7 @@ This AI application can be built with a UI, server and storage technologies. In 
 My stack for this is Node/PostgreSQL, Express, Docker, OpenAI, React, Tailwind, Vite.
 Link to the code is below:
 
-[Case Study: Support Triage Agent](https://github.com/nero2009/support-triage-agent)
+[Case Study: Support Triage Agent](https://github.com/nero2009/support-ops)
 
 
 
