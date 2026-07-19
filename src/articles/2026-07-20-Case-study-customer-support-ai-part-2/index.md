@@ -21,11 +21,10 @@ With this in mind AI runs and results will be stored in a separate runs table. T
 
 
 
-Evaluation is critical to any AI application, so I wanted it built in from the start.
-
-The model needs an anchor to guide its decision. One of these anchors is human gold standard review. I built a way for a human to annotate each ticket, and each annotation becomes ground truth I use to evaluate and fine-tune the model later. Because this lives in the AI application, I can query the data, A/B test models, and calculate accuracy, TP, FP, and FN rates.
+Evaluation is critical to any AI application, so I wanted it built in from the start. The model needs an anchor to guide its decision. One of these anchors is human gold standard review. I built a way for a human to annotate each ticket, and each annotation becomes ground truth I use to evaluate and fine-tune the model later. Because this lives in the AI application, I can query the data, A/B test models, and calculate accuracy, TP, FP, and FN rates.
 This data will be stored in the runs_annotations table, a human provides the expected category, priority, needs_human_review flag etc.
 
+### Storage Diagram
 <img src="./support_ops_db.png" alt="Storage Diagram" width="100%" />
 
 The AI output is only stored for evaluation purposes, it never writes into the ticket table, because until the evals prove the model works, I won't let it touch the source of truth.
