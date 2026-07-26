@@ -20,21 +20,21 @@ PiggyVest is a Nigerian fintech company that provides a platform for users to sa
 
 ## Problem
 
-I will be using real, messy data instead of a synthetic dataset: manually screenshotted PiggyVest Twitter replies, OCR'd with Gemini. We will also be using publicly available FAQs, blogs and other relevant information to provide context for the AI agent.
+I will be using real, messy data instead of a synthetic dataset: manually screenshotted PiggyVest Twitter replies, OCR'd(image to text) with Gemini. We will also be using publicly available FAQs, blogs and other relevant information to provide context for the AI agent.
 This is purely for educational purposes (I hope this is not a violation of their terms of service but this is for personal use and not for commercial use).
 
 ## Why this project?
 
-This project is a good and common use case for AI agents. A support triage agent has a clear success metric (accuracy against human-labeled ground truth), real user issues and a clear learning progression (gathering data -> cleaning data -> calling an LLM -> structured output -> evaluation -> improvement).
+This project is a good and common use case for AI agents. A support triage agent has a clear success metric (accuracy against human-labeled ground truth), real user issues and a clear learning progression (gathering data -> cleaning data -> calling an LLM -> structured output -> evaluation -> improvement ).
 
 ## What's ahead
 
 - Building the support triage agent platform
-- Binary check evaluation
 - LLM-as-judge evaluation
-- RAG (Retrieval-Augmented Generation)
+- Routing
 - Tool calling
 - Function calling
+- RAG (Retrieval-Augmented Generation)
 - Agent response generation/auto escalation
 
 <br />

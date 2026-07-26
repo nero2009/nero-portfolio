@@ -87,7 +87,7 @@ const Template = ({ data }) => {
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <div>
             <h4 className="article__author">
-              Written by {blog.frontmatter.author}
+              {blog.frontmatter.author}
             </h4>
             <h4 className="article__date">
               {date.toLocaleDateString('en-US', options)}
@@ -102,7 +102,6 @@ const Template = ({ data }) => {
         </div>
         {blog.frontmatter.tags && blog.frontmatter.tags.length > 0 && (
           <div className="article__tags">
-            <span className="article__tags-label">Tags:</span>
             {blog.frontmatter.tags.map(tag => (
               <Link
                 key={tag}
