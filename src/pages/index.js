@@ -7,13 +7,13 @@ import Hero from '../components/hero'
 import kebabCase from '../utils/kebabCase'
 
 const blogs = ({ data }) => {
-  const sortedByDate = data.allMarkdownRemark.edges.sort(
-    (a, b) => new Date(b.node.frontmatter.date) - new Date(a.node.frontmatter.date)
-  )
+  const allBlogs = data.allMarkdownRemark.edges
+  const latestPosts = allBlogs.slice(0, 4)
+  const hasMorePosts = allBlogs.length > 4
 
   // Collect all unique tags with their counts
   const tagCounts = {}
-  data.allMarkdownRemark.edges.forEach(({ node }) => {
+  allBlogs.forEach(({ node }) => {
     if (node.frontmatter.tags) {
       node.frontmatter.tags.forEach(tag => {
         tagCounts[tag] = (tagCounts[tag] || 0) + 1
@@ -31,7 +31,7 @@ const blogs = ({ data }) => {
         <div className="blog-page">
           <p className="blog-page__text">blogs</p>
           <section className="post-container">
-            {sortedByDate.map(post => (
+            {latestPosts.map(post => (
               <Blog
                 title={post.node.frontmatter.title}
                 date={post.node.frontmatter.date}
@@ -41,7 +41,14 @@ const blogs = ({ data }) => {
             ))}
           </section>
 
+          {hasMorePosts && (
+            <Link to="/blogs" className="blog-page__more">
+              view more
+            </Link>
+          )}
+
           {/* All Tags Section */}
+          <p className="blog-page__text">feeling lucky? try a random post</p>
           {sortedTags.length > 0 && (
             <div className="all-tags-section">
               <div className="all-tags-container">
@@ -75,6 +82,7 @@ export const Head = ({ location }) => (
 export const pageQuery = graphql`
   query BlogListQuery {
     allMarkdownRemark(
+      sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { date: { lte: "now" } } }
     ) {
       edges {
