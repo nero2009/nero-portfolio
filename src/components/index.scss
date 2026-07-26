@@ -149,6 +149,11 @@ a {
 /* Blog List */
 .blog-page {
   margin-top: 24px;
+
+  .article-back-button {
+    margin-bottom: 16px;
+  }
+
   &__text {
     font-size: 1.5rem;
     font-weight: 700;

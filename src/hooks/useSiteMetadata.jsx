@@ -10,6 +10,7 @@ export const useSiteMetadata = () => {
           author
           siteUrl
           image
+          personImage
           social {
             title
             link

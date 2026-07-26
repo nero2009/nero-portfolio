@@ -2,6 +2,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const { getSiteSocialImagePath } = require('./lib/socialImages')
+
 module.exports = {
   siteMetadata: {
     title: `Oghenero Adaware - Software Engineer | Full Stack Developer`,
@@ -9,9 +11,10 @@ module.exports = {
     author: `Oghenero Adaware`,
     // Keep this consistent with your real, preferred domain (and make sure the other domain 301-redirects to it).
     siteUrl: `https://finallynero.dev`,
-    // Used for OpenGraph/Twitter cards. Must be a real, publicly reachable path.
-    // The manifest plugin generates these icons at /icons/* during build.
-    image: `/icons/icon-512x512.png`,
+    // Used for Open Graph/Twitter cards and generated during the Gatsby build.
+    image: getSiteSocialImagePath(),
+    // The manifest plugin generates this icon at /icons/* during build.
+    personImage: `/icons/icon-512x512.png`,
     keywords: `Oghenero Adaware, finallynero, Software Engineer, Full Stack Developer, React Developer, Node.js Developer, TypeScript, React Native, Python Developer, WebRTC, AI Engineer, Frontend Developer, Backend Developer, Web Development, Mobile Development`,
     social: [
       { title: 'Github', link: 'https://github.com/nero2009', icon: 'github' },
