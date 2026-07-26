@@ -3,7 +3,7 @@ path: /customer-support-ai-case-study-part-2
 date: 2026-07-20
 title: Customer Support AI Case Study (Part 2)
 author: Oghenero Adaware
-description: This is the second part of the Customer Support AI Case Study. We discuss the design patterns used to build the AI application.
+description: We continue with platform design, data modelling decisions while gathering output needed for evaluation. 
 tags: ["AI", "LLM", "Case Study" , "Eval"]
 ---
 

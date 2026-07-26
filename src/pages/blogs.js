@@ -1,8 +1,9 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Seo from '../components/seo'
 import Layout from '../components/layout'
 import Blog from '../components/blog'
+import BackArrow from '../components/backArrow'
 
 const BlogIndex = ({ data }) => {
   const blogs = data.allMarkdownRemark.edges
@@ -11,6 +12,9 @@ const BlogIndex = ({ data }) => {
     <Layout>
       <div className="layout-container">
         <div className="blog-page">
+          <Link to="/" className="article-back-button" aria-label="Back to home">
+            <BackArrow />
+          </Link>
           <p className="blog-page__text">blogs</p>
           <section className="post-container">
             {blogs.map(post => (

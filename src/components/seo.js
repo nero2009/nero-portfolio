@@ -1,12 +1,27 @@
 import React from 'react'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 
-const Seo = ({ title, description, pathname, author, children }) => {
+const toAbsoluteUrl = (siteUrl, value) => {
+  if (!value) return undefined
+  return /^https?:\/\//.test(value) ? value : `${siteUrl}${value}`
+}
+
+const Seo = ({
+  title,
+  description,
+  pathname,
+  author,
+  image,
+  imageAlt,
+  type = 'website',
+  children,
+}) => {
   const {
     title: defaultTitle,
     description: defaultDescription,
     siteUrl,
     image: defaultImage,
+    personImage,
   } = useSiteMetadata()
 
   const seo = {
@@ -14,8 +29,11 @@ const Seo = ({ title, description, pathname, author, children }) => {
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
     author: author || 'Oghenero Adaware',
-    image: defaultImage ? `${siteUrl}${defaultImage}` : undefined,
+    image: toAbsoluteUrl(siteUrl, image || defaultImage),
+    imageAlt:
+      imageAlt || 'finallynero.dev — Oghenero Adaware, Software Engineer',
   }
+  const personImageUrl = toAbsoluteUrl(siteUrl, personImage)
 
   const schemaOrgJSONLD = [
     {
@@ -43,7 +61,7 @@ const Seo = ({ title, description, pathname, author, children }) => {
       givenName: 'Oghenero',
       familyName: 'Adaware',
       url: siteUrl,
-      image: seo.image,
+      image: personImageUrl,
       sameAs: [
         'https://www.linkedin.com/in/finallynero/',
         'https://github.com/nero2009',
@@ -115,13 +133,27 @@ const Seo = ({ title, description, pathname, author, children }) => {
       <meta property="og:title" content={seo.title} />
       <meta property="og:description" content={seo.description} />
       <meta property="og:url" content={seo.url} />
-      <meta property="og:type" content="website" />
-      {seo.image ? <meta property="og:image" content={seo.image} /> : null}
+      <meta property="og:type" content={type} />
+      {seo.image ? (
+        <>
+          <meta property="og:image" content={seo.image} />
+          <meta property="og:image:secure_url" content={seo.image} />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content={seo.imageAlt} />
+        </>
+      ) : null}
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={seo.title} />
       <meta name="twitter:description" content={seo.description} />
-      {seo.image ? <meta name="twitter:image" content={seo.image} /> : null}
+      {seo.image ? (
+        <>
+          <meta name="twitter:image" content={seo.image} />
+          <meta name="twitter:image:alt" content={seo.imageAlt} />
+        </>
+      ) : null}
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJSONLD)}
       </script>
@@ -131,4 +163,3 @@ const Seo = ({ title, description, pathname, author, children }) => {
 }
 
 export default Seo
-
