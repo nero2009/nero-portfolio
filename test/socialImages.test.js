@@ -1,5 +1,4 @@
 const assert = require('node:assert/strict')
-const { spawnSync } = require('node:child_process')
 const fs = require('node:fs/promises')
 const os = require('node:os')
 const path = require('node:path')
@@ -9,6 +8,8 @@ const {
   IMAGE_HEIGHT,
   IMAGE_WIDTH,
   TITLE_AREA,
+  createBlogSocialImageSvg,
+  createSiteSocialImageSvg,
   fitBlogTitle,
   generateSocialImages,
   getBlogSocialImagePath,
@@ -16,27 +17,16 @@ const {
 } = require('../lib/socialImages')
 const sharp = require('sharp')
 
-test('Fontconfig discovers the bundled Inter font', t => {
-  const result = spawnSync(
-    'fc-match',
-    ['-f', '%{family} %{style}', 'Inter:weight=bold'],
-    {
-      env: {
-        ...process.env,
-        FONTCONFIG_FILE: path.resolve('lib/fontconfig.xml'),
-        XDG_CACHE_HOME: path.resolve('.cache'),
-      },
-      encoding: 'utf8',
-    }
+test('social image SVGs use font outlines instead of native text rendering', async () => {
+  const siteSvg = createSiteSocialImageSvg()
+  const blogSvg = await createBlogSocialImageSvg(
+    'Customer Support AI Case Study (Part 2)'
   )
 
-  if (result.error?.code === 'ENOENT') {
-    t.skip('fc-match is not available in this environment')
-    return
+  for (const svg of [siteSvg, blogSvg]) {
+    assert.doesNotMatch(svg, /<text\b/)
+    assert.match(svg, /<path\b/)
   }
-
-  assert.equal(result.status, 0, result.stderr)
-  assert.match(result.stdout, /Inter.*Bold/)
 })
 
 test('Blog image paths are deterministic and change with the title', () => {
@@ -67,8 +57,8 @@ test('the longest current Blog title fits inside the approved title area', async
   )
 
   assert.ok(fitted.fontSize >= 48)
-  assert.ok(fitted.info.width <= TITLE_AREA.width)
-  assert.ok(fitted.info.height <= TITLE_AREA.height)
+  assert.ok(fitted.width <= TITLE_AREA.width)
+  assert.ok(fitted.height <= TITLE_AREA.height)
 })
 
 test('an illegibly long title fails instead of being cropped or truncated', async () => {
