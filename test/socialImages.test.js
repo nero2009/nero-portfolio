@@ -1,4 +1,5 @@
 const assert = require('node:assert/strict')
+const { spawnSync } = require('node:child_process')
 const fs = require('node:fs/promises')
 const os = require('node:os')
 const path = require('node:path')
@@ -14,6 +15,29 @@ const {
   getSiteSocialImagePath,
 } = require('../lib/socialImages')
 const sharp = require('sharp')
+
+test('Fontconfig discovers the bundled Inter font', t => {
+  const result = spawnSync(
+    'fc-match',
+    ['-f', '%{family} %{style}', 'Inter:weight=bold'],
+    {
+      env: {
+        ...process.env,
+        FONTCONFIG_FILE: path.resolve('lib/fontconfig.xml'),
+        XDG_CACHE_HOME: path.resolve('.cache'),
+      },
+      encoding: 'utf8',
+    }
+  )
+
+  if (result.error?.code === 'ENOENT') {
+    t.skip('fc-match is not available in this environment')
+    return
+  }
+
+  assert.equal(result.status, 0, result.stderr)
+  assert.match(result.stdout, /Inter.*Bold/)
+})
 
 test('Blog image paths are deterministic and change with the title', () => {
   const input = {
