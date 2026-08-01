@@ -1,9 +1,9 @@
 ---
 path: /customer-support-ai-case-study-part-2
 date: 2026-07-20
-title: Customer Support AI Case Study (Part 2)
+title: Customer Support AI Case Study (Part 2) - Platform Design and Data Modelling
 author: Oghenero Adaware
-description: We continue with platform design, data modelling decisions while gathering output needed for evaluation. 
+description: We continue with platform design, data modelling decisions while gathering output needed for evaluation. This article covers the decisions made in building the Support Triage Agent platform.
 tags: ["AI", "LLM", "Case Study" , "Eval"]
 ---
 

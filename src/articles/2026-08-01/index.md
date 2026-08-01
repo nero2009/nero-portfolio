@@ -15,7 +15,7 @@ Without a specified format, the model returns natural language. I needed it to r
 I first asked the model to classify a ticket using prompt instructions alone, without a structured output format.
 
 Ticket body:
-"I tried to withdraw ₦50,000 from my Flex account yesterday but the money has not hit my bank. Transaction ID is TXN-99821. Please help."
+```I tried to withdraw ₦50,000 from my Flex account yesterday but the money has not hit my bank. Transaction ID is TXN-99821. Please help.```
 
 Model Response:
 
@@ -24,11 +24,12 @@ Category: Withdrawal Issue
 Short Summary: Customer reports a failed withdrawal of ₦50,000 from their Flex account.  
 Sentiment: Frustrated  
 Needs Human Review: Yes
+Information Sufficiency: Yes
 ```
 
 The model followed the prompt, but it returned prose. My code could display this response, but it could not reliably store or query individual fields such as category and priority. I needed a fixed response shape.  
-With Structured Outputs enabled, the same ticket produced:
 
+With Structured Outputs schema defined, the same ticket produced:
 ```
 {
   "category": "withdrawal",
@@ -39,13 +40,14 @@ With Structured Outputs enabled, the same ticket produced:
   "is_information_sufficient": true
 }
 ```
+<br/>
+
 
 ### Designing the output contract
 
 Given a support ticket, the model generates a summary, assigns a category and priority, identifies the customer’s sentiment, and determines whether human review is required. Those are the fields I store on a successful Run. I store each Run so I can compare the model’s decisions with human labels. Once I know which decisions are reliable, I can use them to route tickets and support other workflows.
 
 Here is the output contract:
-
 - `category`: Limits the model to the ticket categories supported by the application.
 - `priority`: Limits the result to low, medium, high, or urgent.
 - `sentiment`: Captures whether the customer’s tone is positive, negative, or neutral.
@@ -63,8 +65,10 @@ Here is the output contract:
   "is_information_sufficient": "boolean"
 }
 ```
+<br/>
 
 ### Enforcing the contract
+
 
 I used Zod to validate the response before storing the Run. It catches missing fields and incorrect types before I store the Run. Strict Structured Outputs make these errors unlikely, but I still validate before trusting the response.
 See OpenAI’s guidance on [avoiding JSON Schema divergence](https://developers.openai.com/api/docs/guides/structured-outputs#avoid-json-schema-divergence).
@@ -87,6 +91,7 @@ const response = await openai.chat.completions.create({
 ```
 See the [OpenAI Structured Outputs documentation](https://developers.openai.com/api/docs/guides/structured-outputs).
 
+
 ### The model prompt
 
 The schema defines the shape and types of the output, while the prompt defines the rules, constraints, and meaning of each field. See OpenAI’s [Prompt Engineering guide](https://developers.openai.com/api/docs/guides/prompt-engineering).
@@ -107,20 +112,27 @@ Guidance:
 ```
 For example, I treat fraud-related tickets as requiring human review. The prompt encodes that decision by telling the model when to set needs_human_review to true. The schema requires a boolean; the prompt gives that boolean meaning.
 
+
 ### How it fits into the application
 
 I put the triage model call in the triggerRun service and exposed it through POST /tickets/:id/runs. I can trigger a Run manually, on a schedule, or in response to an event.
 
 
 #### Successful flow
+
+```
 POST /tickets/:id/runs -> triggerRun service -> model call -> validated output -> successful Run stored
+```
+<br/>
 
 #### Failed flow
 
 The model can refuse a request, the API call can fail, or the response can be incomplete. In each case, I store a failed Run with the available error details.
 
+```
 POST /tickets/:id/runs → triggerRun service → model call → refusal, error, or missing output → failed Run stored
-
+```
+<br/>
 
 ### Structure does not guarantee correctness
 
