@@ -1,5 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import BrandIcon from './brandIcon'
 
 const social = () => (
   <StaticQuery
@@ -28,16 +29,14 @@ const social = () => (
             aria-label={item.title}
             className={`${item.icon}--hover social__icon`}
           >
-            <img
-              src={
-                item.icon === 'dev'
-                  ? 'https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg'
-                  : `https://icongr.am/fontawesome/${
-                      item.icon
-                    }.svg?color=ffffff`
-              }
-              alt={item.title}
-            />
+            {item.icon === 'dev' ? (
+              <img
+                src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
+                alt=""
+              />
+            ) : (
+              <BrandIcon name={item.icon} />
+            )}
           </a>
         ))}
       </div>

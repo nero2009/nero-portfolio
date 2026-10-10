@@ -7,6 +7,46 @@ import FloatingShare from '../components/floatingshare'
 import BackArrow from '../components/backArrow'
 import kebabCase from '../utils/kebabCase'
 
+const GITHUB_EDIT_ROOT =
+  'https://github.com/nero2009/nero-portfolio/edit/master/src/articles/'
+
+const githubEditUrl = relativePath => {
+  if (!relativePath) return null
+
+  const encodedPath = relativePath
+    .split('/')
+    .map(segment => encodeURIComponent(segment))
+    .join('/')
+
+  return `${GITHUB_EDIT_ROOT}${encodedPath}`
+}
+
+const EditIcon = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <path
+      d="M12 20h9"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+)
+
 const Template = ({ data }) => {
   const [showShare, setShowShare] = useState(false)
 
@@ -31,6 +71,7 @@ const Template = ({ data }) => {
   }, [showShare])
 
   const blog = data.markdownRemark
+  const editUrl = githubEditUrl(blog.parent?.relativePath)
   const date = new Date(blog.frontmatter.date)
   const options = {
     weekday: 'long',
@@ -88,6 +129,19 @@ const Template = ({ data }) => {
           title={blog.frontmatter.title}
           url={`${data.site.siteMetadata.siteUrl}${blog.frontmatter.path}`}
         />
+        {editUrl && (
+          <div className="article__edit">
+            <a
+              className="article__edit-link"
+              href={editUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <EditIcon />
+              Edit this page
+            </a>
+          </div>
+        )}
         <div className="divider" />
         <footer className="article__footer">
           <p>
@@ -178,6 +232,11 @@ export const articleQuery = graphql`
   query BlogPostByPath($slug: String!) {
     markdownRemark(frontmatter: { path: { eq: $slug } }) {
       html
+      parent {
+        ... on File {
+          relativePath
+        }
+      }
       frontmatter {
         path
         title
