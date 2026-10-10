@@ -48,3 +48,5 @@ Part of inference engineering is trying to fix these compute and memory bottlene
 FLOP/s is floating-point operations per second: how much math we can do.
 
 TB/s is how fast we can move data for those operations: the weights times their bit width(4bit, 8bit, 16bit, 32bit, 64bit. Techniques like quantization can reduce the bit width), plus the KV cache.
+
+This is my understanding at the moment, i might be wrong, the aim is to learn more and more as i go along.
