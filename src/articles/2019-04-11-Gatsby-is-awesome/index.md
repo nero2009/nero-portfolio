@@ -32,7 +32,7 @@ The documentation is one of the best amongst all the libraries and frameworks I 
 
 That is the homepage of my first Gatsby portfolio/blog.
 
-<img src="./about.PNG" alt ="About me">
+<img src="./about.PNG" alt ="About me" width='100%'>
 <!-- ![About me page](./about.PNG) -->
 
 The design wasn't the best in the world but it was working. I learned a lot building the project, for the first time I used a CMS(content management system), it also gave me a basic understanding of Graphql while I was able to improve my understanding of React. I used styled-components for components for the styling and contentful as my CMS.
