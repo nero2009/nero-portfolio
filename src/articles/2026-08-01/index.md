@@ -136,6 +136,6 @@ POST /tickets/:id/runs → triggerRun service → model call → refusal, error,
 
 ### Structure does not guarantee correctness
 
-Structured Outputs gave my application a predictable response shape, but the model could still choose the wrong values. It could assign the wrong category or request human review when none was needed.  
+Structured Outputs gave my application a predictable response shape, but the model can choose the wrong values. It could assign the wrong category or request human review when none was needed.  
 I therefore needed to compare each Run with a human-reviewed answer. In Part 4, I will show how I created those labels and measured the model’s decisions.
 
