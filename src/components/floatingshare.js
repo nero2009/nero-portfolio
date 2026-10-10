@@ -1,4 +1,5 @@
 import React from 'react'
+import BrandIcon from './brandIcon'
 
 const floatingshare = props => {
   return (
@@ -8,13 +9,9 @@ const floatingshare = props => {
         target="_blank"
         rel="noopener noreferrer"
         className="share__container twitter"
+        aria-label="Share on Twitter"
       >
-        <img
-          src="https://icongr.am/fontawesome/twitter.svg?color=ffffff"
-          alt="Share on Twitter"
-          className="share__icon"
-          title="Share on Twitter"
-        />
+        <BrandIcon name="twitter" className="share__icon" />
       </a>
 
       <a
@@ -22,13 +19,9 @@ const floatingshare = props => {
         target="_blank"
         rel="noopener noreferrer"
         className="share__container linkedin"
+        aria-label="Share on Linkedin"
       >
-        <img
-          src="https://icongr.am/fontawesome/linkedin.svg?color=ffffff"
-          alt="Share on Linkedin"
-          className="share__icon"
-          title="Share on Linkedin"
-        />
+        <BrandIcon name="linkedin" className="share__icon" />
       </a>
     </aside>
   )

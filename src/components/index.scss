@@ -228,10 +228,66 @@ a {
   }
 }
 
+.share {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  &__container {
+    display: inline-flex;
+    color: #111;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+      color: #111;
+    }
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    display: block;
+  }
+}
+
+.floating-share {
+  display: none;
+
+  @media (min-width: 1040px) {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: fixed;
+    top: 30vh;
+    left: calc(50vw - 460px);
+    z-index: 10;
+
+    a {
+      transition: transform 0.3s;
+    }
+
+    &.hide a {
+      transform: scale(0);
+    }
+  }
+}
+
 .social {
   display: flex;
   gap: 15px;
   justify-content: center;
+
+  a {
+    text-decoration: none;
+    color: #111;
+
+    &:hover {
+      color: #111;
+    }
+  }
 
   &__icon {
     width: 24px;
@@ -239,9 +295,11 @@ a {
     opacity: 0.6;
     transition: opacity 0.2s;
     
+    svg,
     img {
       width: 100%;
       height: 100%;
+      display: block;
     }
 
     &:hover {
@@ -379,6 +437,31 @@ a {
   &__count {
     font-size: 0.65rem;
     opacity: 0.7;
+  }
+}
+
+/* Edit link at the end of an article, same slot docs sites use */
+.article__edit {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #eaeaea;
+}
+
+.article__edit-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    color: #111;
   }
 }
 

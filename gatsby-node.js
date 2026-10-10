@@ -41,7 +41,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     throw res.errors
   }
 
-  const posts = res.data.allMarkdownRemark.edges
+  const posts = res.data.allMarkdownRemark.edges.filter(({ node }) => {
+    const postPath = node.frontmatter?.path
+    const title = node.frontmatter?.title
+    return (
+      typeof postPath === 'string' &&
+      postPath.trim() !== '' &&
+      typeof title === 'string' &&
+      title.trim() !== ''
+    )
+  })
   const socialImages = await generateSocialImages({
     posts: posts.map(({ node }) => ({
       path: node.frontmatter.path,
