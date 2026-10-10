@@ -1,7 +1,7 @@
 ---
 path: /inference-engineering-prefill-and-decode
 date: 2026-10-10
-title: Inference Engineering: Introduction to what happens in GPU
+title: Inference Engineering - Introduction to what happens in GPUs
 author: Nero Adaware
 description: Introduction to how models work when we prompt them, how we can optimize them and where these bottlenecks are.
 tags: ["AI", "LLM", "Inference Engineering"]
