@@ -28,7 +28,7 @@ The documentation is one of the best amongst all the libraries and frameworks I 
 
 <!-- ![Homepage](./firstblog.PNG) -->
 
-<img src="./firstblog.PNG" alt ="Homepage">
+<img src="./firstblog.PNG" alt ="Homepage" width='100%'>
 
 That is the homepage of my first Gatsby portfolio/blog.
 

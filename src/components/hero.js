@@ -12,10 +12,10 @@ const Hero = () => {
         <meta itemProp="url" content="https://finallynero.dev" />
         
         <p className="introsubtext" itemProp="description">
-          Software Engineer with over 9 years experience building fullstack web,
-          mobile applications and AI applications.
+          Software Engineer, AI Engineer, Fullstack Developer
+          
         </p>
-        <p className="introsubtext">
+        <p className="introsubtext introsubtext--email">
           <a href="mailto:nero2009@rocketmail.com" className="simple-link" itemProp="email">nero2009@rocketmail.com</a>
         </p>
       </div>

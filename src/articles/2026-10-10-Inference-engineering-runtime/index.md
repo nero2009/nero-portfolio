@@ -22,22 +22,32 @@ Prefill is compute-bound. The weights are loaded once, and a lot of matrix multi
 
 Decode is memory-bound. To generate one token, the model has to load the weights and the KV cache and multiply them. It does that again for every token still left to generate. We are limited by how fast we can move the weights in for the calculation. While the weights are moving, the compute is just waiting for work.
 
-```
-                   LLM inference
-                        │
-              ┌─────────┴─────────┐
-              │                   │
-          PREFILL               DECODE
-              │                   │
-      Read your prompt       Write the answer
-              │                   │
-      Many tokens at once     1 token at a time
-              │                   │
-       parallel        Limited parallelism
-              │                   │
-      Lots of calculations   Lots of weight reading
-              │                   │
-     Often compute-bound    Often memory-bound
+```mermaid
+flowchart TB
+  Root["LLM inference"]
+
+  Root --> Prefill["Prefill"]
+  Root --> Decode["Decode"]
+
+  Prefill --> P1["Read your prompt"]
+  P1 --> P2["Many tokens at once"]
+  P2 --> P3["High parallelism"]
+  P3 --> P4["Lots of calculations"]
+  P4 --> P5["Often compute-bound"]
+
+  Decode --> D1["Write the answer"]
+  D1 --> D2["1 token at a time"]
+  D2 --> D3["Limited parallelism"]
+  D3 --> D4["Lots of weight reading"]
+  D4 --> D5["Often memory-bound"]
+
+  classDef prefill fill:#d7e6ef,stroke:#94b2c6,color:#1e2a32
+  classDef decode fill:#efe8f6,stroke:#b8a4cc,color:#2a2433
+  classDef root fill:#e8f3ea,stroke:#9dbfa6,color:#243028
+
+  class Root root
+  class Prefill,P1,P2,P3,P4,P5 prefill
+  class Decode,D1,D2,D3,D4,D5 decode
 ```
 
 Part of inference engineering is trying to fix these compute and memory bottlenecks in both the prefill and decode steps. That is why a lot of benchmarks measure:
@@ -48,3 +58,5 @@ Part of inference engineering is trying to fix these compute and memory bottlene
 FLOP/s is floating-point operations per second: how much math we can do.
 
 TB/s is how fast we can move data for those operations: the weights times their bit width(4bit, 8bit, 16bit, 32bit, 64bit. Techniques like quantization can reduce the bit width), plus the KV cache.
+
+This is my understanding at the moment, i might be wrong, the aim is to learn more and more as i go along.

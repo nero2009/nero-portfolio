@@ -25,5 +25,4 @@ You might think big tech already has all the inference engineer jobs, and there 
 
 My goal is to go into more detail on different aspects of inference engineering. Model deployment, inference optimization, context management, and so on.
 
-
-
+This is my understanding at the moment, i might be wrong, the aim is to learn more and more as i go along.

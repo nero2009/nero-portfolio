@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-import HeaderBorder from '../../assets/header-border.svg'
+import BackArrow from '../components/backArrow'
 import kebabCase from '../utils/kebabCase'
 
 const TagsPage = ({ data }) => {
@@ -12,19 +12,19 @@ const TagsPage = ({ data }) => {
     <Layout>
       <div className="layout-container">
         <div className="tags-page">
-          <p className="tags-page__text">
-            all <span>tags</span>
-          </p>
-          <HeaderBorder style={{ width: 100 }} />
+          <Link to="/" className="article-back-button" aria-label="Back to home">
+            <BackArrow />
+          </Link>
+          <p className="blog-page__text">topics</p>
           <div className="tags-container">
             {allTags.map(tag => (
               <Link
                 key={tag.fieldValue}
                 to={`/tags/${kebabCase(tag.fieldValue)}/`}
-                className="tag-bubble"
+                className="tag-item"
               >
-                <span className="tag-name">{tag.fieldValue}</span>
-                <span className="tag-count">({tag.totalCount})</span>
+                <span className="tag-item__name">{tag.fieldValue}</span>
+                <span className="tag-item__count">({tag.totalCount})</span>
               </Link>
             ))}
           </div>
