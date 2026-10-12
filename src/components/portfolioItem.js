@@ -20,7 +20,7 @@ const portfolioItem = props => {
             {props.link.github && (
               <a
                 href={props.link.github}
-                target="__blank"
+                target="_blank"
                 rel="noopener noreferrer"
                 aria-label="github"
               >
@@ -30,7 +30,7 @@ const portfolioItem = props => {
             {props.link.live && (
               <a
                 href={props.link.live}
-                target="__blank"
+                target="_blank"
                 rel="noopener noreferrer"
                 aria-label="live demo"
               >

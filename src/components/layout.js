@@ -6,29 +6,34 @@ import Header from './header'
 import Footer from './footer'
 import './index.scss'
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+const Layout = ({ children, className = '' }) => {
+  const shellClass = ['site', className].filter(Boolean).join(' ')
+
+  return (
+    <StaticQuery
+      query={graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
+            }
           }
         }
-      }
-    `}
-    render={data => (
-      <>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-      </>
-    )}
-  />
-)
+      `}
+      render={data => (
+        <div className={shellClass}>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </div>
+      )}
+    />
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
 }
 
 export default Layout

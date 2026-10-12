@@ -17,7 +17,7 @@ const TagTemplate = ({ data, pageContext }) => {
         <div className="blog-page">
           <div className="tag-page-header">
             <Link to="/tags" className="tag-back-link">
-              ← All Tags
+              ← all topics
             </Link>
             <h1 className="tag-page-title">{tagHeader}</h1>
           </div>

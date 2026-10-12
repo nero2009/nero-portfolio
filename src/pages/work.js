@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import HeaderBorder from '../../assets/header-border.svg'
 import Seo from '../components/seo'
 import PortfolioItem from '../components/portfolioItem'
 
@@ -9,9 +8,8 @@ const work = ({ data }) => {
   return (
     <Layout>
       <div className="layout-container">
-        <div className="about-page">
-          <p className="about-page__text">portfolio</p>
-          <HeaderBorder style={{ width: 100 }} />
+        <div className="work-page">
+          <p className="blog-page__text">portfolio</p>
           <div className="portfolio-container">
             <PortfolioItem
               image={data.portfolioImage1.fluid}
@@ -64,13 +62,14 @@ const work = ({ data }) => {
               You can check out some of my other interesting project on{' '}
               <a
                 href="https://github.com/nero2009"
-                className="inline-link"
+                className="simple-link"
                 aria-label="github"
-                target="__blank"
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 my github
-              </a>{' '}
+              </a>
+              .
             </p>
           </div>
         </div>

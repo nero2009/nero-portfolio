@@ -76,12 +76,22 @@ module.exports = {
           `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-prismjs`,
-            options: {},
+            options: {
+              classPrefix: 'language-',
+              aliases: {
+                sh: 'bash',
+                js: 'javascript',
+                ts: 'typescript',
+                diagram: 'text',
+              },
+              showLineNumbers: false,
+              noInlineHighlight: false,
+            },
           },
           {
             resolve: '@weknow/gatsby-remark-codepen',
             options: {
-              theme: 'dark',
+              theme: 'light',
               height: 400,
             },
           },

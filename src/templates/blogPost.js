@@ -91,7 +91,7 @@ const Template = ({ data }) => {
         </header>
 
         <div className="divider" />
-        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <div className="article__meta">
           <div>
             <h4 className="article__author">
               {blog.frontmatter.author}
@@ -148,8 +148,8 @@ const Template = ({ data }) => {
             Personal Blog of{' '}
             <a
               href="https://www.linkedin.com/in/adaware-oghenero/"
-              target="__blank"
-              rel="noopener"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Oghenero Adaware
             </a>
